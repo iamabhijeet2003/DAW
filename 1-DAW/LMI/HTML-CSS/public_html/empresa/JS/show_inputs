@@ -1,0 +1,8 @@
+// onclick="showInputs();"
+function showInputs(){
+    var form = document.getElementById('form');
+    var data = new FormData(form);
+    for (var [key, value] of data) {
+        console.log(key, value);
+    }
+}

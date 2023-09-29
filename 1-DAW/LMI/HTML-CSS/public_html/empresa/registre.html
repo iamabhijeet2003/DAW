@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cafeteria Abhi">
+    <meta name="keywords" content="Café,Desayuno,Almuerzo,Bebidas">
+    <meta name="author" content="Abhijeet Singh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/general.css">
+    <script src="JS/show_inputs"> </script>
+    <title>Registro</title>
+</head>
+<body>
+    <nav id="main-nav">
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="enlaces.html">Enlaces</a></li>
+        <li><a href="contactes.html">Contacto</a></li>
+        <li><a href="productes.html">Carta</a></li>
+        <li><a href="multimedia.html">Media</a></li>
+        <li><a href="horari.html">Horario</a></li>
+        <li><a href="#">Registro</a></li>
+        </ul>
+    </nav>
+
+    <h1 >Cafetería Abhi</h1>
+
+
+    <h2>Registro de Usuarios</h2>
+
+    <div class="radio">
+    <form name="formulario_basico" id="form" method="get">
+        <fieldset>
+            <legend>Informacion Personal</legend>
+            <label for="Fname" > Nombre</label>
+            <input type="text"  id="Fname" name="Nombre" required> <br>
+            <label for="Lname"> Apellidos</label>
+            <input type="text" name="Nombre" id="Lname" maxlength="40" required> <br>
+            <label for="address"> Direccion </label>
+            <input type="text" name="Direccion" id="address" maxlength="60" required> <br>
+            <label for="poblacion"> Poblacion </label>
+            <input type="text" name="poblacion" id="poblacion" required > <br>
+            <label for="email"> Correos electronico </label>
+            <input type="email" name="email" id="email" required> <br>
+            <label for="telefono"> Nº de telefono </label>
+            <input type="number" name="telefono" id="telefono" > <br>
+            <label for="dob"> Fecha de nacimiento </label>
+            <input type="date" name="dob" id="dob" > <br>
+
+            <!-- sexo-->
+            
+            <input type="radio" name="Sexo" id="hombre" value="hombre">    
+            <label for="hombre" class="radio">Hombre</label>        
+            <input type="radio" name="Sexo" id="mujer" value="mujer">    
+            <label for="mujer" class="radio">Mujer</label>    
+            <input type="radio" name="Sexo" id="otro" value="otro">    
+            <label for="otro" class="radio">Otro</label>    
+        </fieldset>
+
+        <fieldset>
+            <legend>Contraseña</legend>
+            <label for="pwd">Escribe la contraseña:</label>
+            <input type="password" id="pwd" name="pwd" required><br>
+            <label for="pwd">Reescribe la contraseña:</label>
+            <input type="password" id="pwd" name="pwd" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion Profesional.</legend>
+            <label for="NomEmpresa" > Nombre de la Empresa</label>
+            <input type="text"  id="NomEmpresa" name="NomEmpresa"> <br>
+            <label for="WebEmpresa" > Web de la Empresa</label>
+            <input type="text"  id="WebEmpresa" name="WebEmpresa" maxlength="60" > <br>
+            <!-- SECTOR -->
+            <input type="checkbox" id="sector1" name="sector1" value="Automocion">
+            <label for="sector1"> Automocion </label><br>
+            <input type="checkbox" id="sector2" name="sector2" value="Educacion">
+            <label for="sector2"> Educacion </label><br>
+            <input type="checkbox" id="sector3" name="sector3" value="Mecanico">
+            <label for="sector3"> Mecanico</label><br>
+            <input type="checkbox" id="sector4" name="sector4" value="Informatica">
+            <label for="sector4"> Informatica</label><br>
+            <input type="checkbox" id="sector5" name="sector5" value="Carnicero">
+            <label for="sector5"> Carnicero</label><br>
+
+        </fieldset>
+         <input type="submit"  name="Submit" onclick="showInputs()">
+    </form>
+    
+    </div>
+</body>
+</html>
