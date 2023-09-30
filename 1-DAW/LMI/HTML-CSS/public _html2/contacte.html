@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Examen LMI">
+    <link rel="stylesheet" href="estil.css">
+    <title>Cova de Bolomor</title>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li><a href="principal.html">Principal</a></li>
+            <li><a href="restes.html">Restes</a></li>
+            <li><a href="#">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        
+                <h1> La cova del Bolomor-Tavernes de la Valldigna</h1> 
+                <p>Cova del Bolomor és un important lloc a la vora de la Mediterrània on descobrir els orígens i les característiques del poblament Paleolític europeu i les formes de vida dels neandertals</p>
+
+    </header>
+
+    <div class="principal">
+
+    <h2>Horari</h2>
+
+
+    <table>
+        <thead>
+            <th></th>
+            <th>De dilluns a Dijous</th>
+            <th>Divendres</th>
+            <th>Dissabte</th>
+            <th>Diumenge</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>10-14h</td>
+                <td colspan="2">Tancat</td>
+                <td colspan="2">Obert</td>
+            </tr>
+
+            <tr>
+                <td>17-19h</td>
+                <td>Tancat</td>
+                <td colspan="2">Obert</td>
+                <td>Tancat</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+    <div>
+    
+    <form name="Formulario" id="form" method="get">
+        <fieldset>
+            <fieldset>
+                <legend>Formulario</legend>
+                <label for="nom" > Nom</label>
+                <input type="text"  id="nom" name="nom" maxlength="30" required> <br>
+                <label for="email"> E-mail</label>
+                <input type="email" name="email" id="email" maxlength="50" required> <br>
+                <!-- motivo de la consulta -->
+                <label for="motiu"> Motiu de la consulta: </label><br>
+                <input type="checkbox" id="motivo1" name="motivo1" value="Visita individual">
+                <label for="motivo1"> Visita individual </label><br>
+                <input type="checkbox" id="motivo2" name="motivo2" value="Visita grup">
+                <label for="motivo2"> Visita grup </label><br>
+                <input type="checkbox" id="motivo3" name="motivo3" value="Informacio">
+                <label for="motivo3"> Informacio</label><br>
+
+
+                <label for="missatge"> Missatge</label>
+                <input type="textarea" name="missatge" id="missatge" > <br>
+
+                <input type="submit"  name="Enviar" > 
+                <input type="reset"  name="Esborrar" >
+        </fieldset>
+    </form>
+    </div>
+
+
+    <div>
+        <p>També pot enviar-nos un correu electrònic a <a href="mailto:contacte@bolomor.com"> contacte@bolomor.comn</a>.</p>
+    </div>
+
+
+</div>
+
+    <footer>© Cova del Bolomor</footer>
+</body>
+</html>

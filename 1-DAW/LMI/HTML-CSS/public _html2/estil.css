@@ -1,0 +1,134 @@
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: #ffeed6;
+    color:#3b3b3b;
+}
+
+header{
+    background-image: url("capcaleres_bolomor.jpg ");
+    color: white;
+    text-align: center;
+    height: 200px;
+    padding: 20px;
+}
+
+header p{
+    font-weight: bold;
+    font-size: 1,5em;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2,h3{
+    color: cadetblue;
+}
+
+.img{
+    margin: 5px;
+    text-align: center;
+}
+
+
+a:link{
+    color: #4d76ff;
+    text-decoration: none;
+}
+a:visited{
+    color: #4d76ff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #f51;
+}
+
+
+footer{
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+nav#menu ul{
+    text-decoration: none;
+    margin: 0px;
+    padding: 20px;
+    background-color: #333;
+}
+
+nav#menu li{
+    display: inline-block;
+}
+
+nav#menu a{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+table{
+    width: 100%;
+    border: 2px solid;
+    border-color: cadetblue;
+    border-collapse: collapse;
+
+}
+
+td,th{
+    border: 2px solid;
+    border-color: cadetblue;
+}
+
+thead{
+    background-color: cadetblue;
+}
+
+
+tbody{
+    background-color: burlywood;
+}
+
+
+
+
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+.principal{
+    width: 800px;
+    margin: 0px;
+    vertical-align: middle;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: inline-block;
+    vertical-align: middlex;
+}
+
+.destacat{
+    color:brown;
+}
