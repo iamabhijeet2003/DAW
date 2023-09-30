@@ -1,0 +1,18 @@
+---
+Productes:
+  - Nom producte : Asus tuf Gaming b660-PLUS
+    Tipus: Placa base
+    Marca: Asus
+    Preu: 89.99
+    En stock: True
+  - Nom producte : Gforce-RTX 3050
+    Tipus: Tarjeta grafica
+    Marca: NVIDIA
+    Preu: 184.55
+    En stock: False
+  - Nom producte : Ryzen 7-5800x
+    Tipus: Procesador
+    Marca: AMD
+    Preu: 125.60
+    En stock: True
+

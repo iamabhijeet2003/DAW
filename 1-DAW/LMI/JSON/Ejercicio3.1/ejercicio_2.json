@@ -1,0 +1,26 @@
+{
+    "Productos":
+    [
+        {
+            "Nom producte": "Asus TUF GAMING B660-PLUS",
+            "Tipus": "Placa base",
+            "Marca": "Asus",
+            "Preu": 89.99,
+            "En stock": true
+        },
+        {
+            "Nom producte": "GeForce-RTX 3050s",
+            "Tipus": "Tarjeta grafica",
+            "Marca": "NVIDIA",
+            "Preu": 184.55,
+            "En stock": false
+        },
+        {
+            "Nom producte": "Ryzen 7 5800X",
+            "Tipus": " Procesador",
+            "Marca": "AMD",
+            "Preu": 125.60,
+            "En stock": true
+        }
+    ]
+}

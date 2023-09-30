@@ -1,0 +1,39 @@
+{
+    "Desserts":
+    [
+        {
+            "ID": "1",
+            "Type": "Ice cream",
+            "name": "Vanilla Cone",
+            "Image":
+                {
+                    "URL": "img1.png",
+                    "width": 200,
+                    "height":200
+                },
+            "Thumbnail":
+                {
+                    "URL": "images/thumbnails.png",
+                    "width": 32,
+                    "height": 32
+                }
+        },
+        {
+            "ID": "3",
+            "Type": "Cupcake",
+            "name": "Banana Split Cupcake",
+            "Image":
+                {
+                    "URL": "img/banana.png",
+                    "width": 300,
+                    "height":400
+                },
+            "Thumbnail":
+                {
+                    "URL": "images/thumbnails/banana.png",
+                    "width": 32,
+                    "height": 32
+                }
+        }
+    ]
+}
