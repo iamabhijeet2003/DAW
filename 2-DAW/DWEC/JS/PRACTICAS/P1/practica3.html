@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romboide</title>
+    <style>
+        #romboide {
+            background-color: black;
+            color:aliceblue;
+            width: 70px;
+            height: 130px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="romboide"></div>
+    <script>
+        function getRandomColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        var num = 4;
+        var limite = num * 2 - 1;
+        var romboide = '';
+
+        for (let i = 1; i <= num; i++) {
+            let espacio = '';
+            let asterisco = '';
+
+            for (let j = 0; j <= num - i; j++) {
+                espacio += '&nbsp;&nbsp;';
+            }
+
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                asterisco += '*';
+            }
+
+            var linea = `<div style="color: ${getRandomColor()}">${espacio}${asterisco}</div>`;
+            romboide += linea;
+        }
+
+        for (let i = num - 1; i >= 1; i--) {
+            let espacio = '';
+            let asterisco = '';
+
+            for (let j = 0; j <= num - i; j++) {
+                espacio += '&nbsp;&nbsp;';
+            }
+
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                asterisco += '*';
+            }
+
+            var linea = `<div style="color: ${getRandomColor()}">${espacio}${asterisco}</div>`;
+            romboide += linea;
+        }
+
+        document.getElementById('romboide').innerHTML = romboide;
+    </script>
+</body>
+</html>

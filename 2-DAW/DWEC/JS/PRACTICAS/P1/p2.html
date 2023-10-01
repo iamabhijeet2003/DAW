@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romboide 2</title>
+    <style>
+        #romboide {
+            background-color: black;
+            color:aliceblue;
+            width: 70px;
+            height: 130px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="romboide"></div>
+    <script>
+        const num = 4;
+        const limite = num * 2 - 1;
+        let romboide = '';
+
+        
+
+      
+        for (let i = 1; i <= num; i++) {
+            let fila = '';
+            for (let j = 1; j <= num - i; j++) {
+                fila += '&nbsp;&nbsp;';
+            }
+            fila += '*';
+            for (let k = 1; k < 2 * i - 2; k++) {
+                fila += '&nbsp;&nbsp;';
+            }
+            if (i !== 1) {
+                fila += '*';
+            }
+            romboide += fila + '<br>';
+        }
+
+   
+        for (let i = num - 1; i >= 1; i--) {
+            let fila = '';
+
+            for (let j = 1; j <= num - i; j++) {
+                fila += '&nbsp;&nbsp;';
+            }
+
+            if (i == 1 || i == num) {
+                for (let k = 1; k <= 2 * i - 1; k++) {
+                    fila += '*';
+                }
+            } else {
+                fila += '*';
+
+                for (let k = 1; k <= 2 * i - 3; k++) {
+                    fila += '&nbsp;&nbsp;';
+                }
+
+                fila += '*';
+            }
+
+            romboide += fila + '<br>';
+        }
+
+        document.getElementById('romboide').innerHTML = romboide;
+    </script>
+</body>
+</html>

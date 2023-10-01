@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romboide 1</title>
+    <style>
+        #romboide {
+            background-color: black;
+            color:aliceblue;
+            width: 70px;
+            height: 130px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="romboide"></div>
+    <script>
+    
+
+        let num = 4;
+        let limite = num * 2 - 1; //pq siempre es 1 linea menos que el doble. limite = 4*2-1=7lineas
+        let romboide = '';
+
+        for (let i = 1; i <= num; i++) {
+            let espacio = '';
+            let asterisco = '';
+
+            for (let j = 0; j <= num - i; j++) {
+                espacio += '&nbsp;&nbsp;';
+            }
+
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                asterisco += '*';
+            }
+
+            romboide += espacio + asterisco + '<br>';
+        }
+
+        for (let i = num - 1; i >= 1; i--) {
+            let espacio = '';
+            let asterisco = '';
+
+            for (let j = 0; j <= num - i; j++) {
+                espacio += '&nbsp;&nbsp;';
+            }
+
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                asterisco += '*';
+            }
+
+            romboide += espacio + asterisco + '<br>';
+        }
+
+        document.getElementById('romboide').innerHTML = romboide;
+    </script>
+</body>
+</html>
+
