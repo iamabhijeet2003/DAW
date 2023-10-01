@@ -1,0 +1,41 @@
+<!-- Saber si un numero es palindromo o no.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Palíndromo</title>
+</head>
+<body>
+    <script>
+        function quitarEspacio(cadena){
+            var palabras = cadena.split(" ");
+            var cadenaSinEspacio = palabras.join("");
+
+            return cadenaSinEspacio;
+        }
+
+        function reversarCadena(cadena){
+            var cadenaReversa = cadena.split("").reverse().join("");
+            return cadenaReversa;
+        }
+
+        function palindromo(cadena){
+            var cadenaSinEspacio = quitarEspacio(cadena);
+            var cadenaReversa = reversarCadena(cadenaSinEspacio);
+
+            if (cadenaSinEspacio === cadenaReversa){
+                return "La cadena es un palíndromo";
+            } else {
+                return "La cadena no es un palíndromo";
+            }
+        }
+
+    
+        var cadena = "la ruta nos aporto otro paso natural";
+        var resultado = palindromo(cadena);
+        console.log(resultado);
+
+    </script>
+</body>
+</html>

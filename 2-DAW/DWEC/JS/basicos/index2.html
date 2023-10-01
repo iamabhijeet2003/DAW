@@ -1,0 +1,40 @@
+<!--Definir una funció que mostri informació sobre una cadena de text que se li passa com a argument.
+A partir de la cadena que se li passa, la funció determina si aquesta cadena està formada només
+per majúscules, només per minúscules o per una barreja de totes dues.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function determinarTipoDeCadena(cadena) {
+            // Convertir la cadena a mayúsculas y minúsculas
+            var cadenaMayusculas = cadena.toUpperCase();
+            var cadenaMinusculas = cadena.toLowerCase();
+
+            // Comparar con la cadena original
+            if (cadena === cadenaMayusculas) {
+                return "Mayúsculas";
+            } else if (cadena === cadenaMinusculas) {
+                return "Minúsculas";
+            } else {
+                return "Mezcla";
+            }
+            }
+
+
+            var resultado = determinarTipoDeCadena("EJEMPLO"); 
+            console.log(resultado);
+
+            resultado = determinarTipoDeCadena("ejemplo"); 
+            console.log(resultado);
+
+            resultado = determinarTipoDeCadena("EjEmPlO"); 
+            console.log(resultado);
+
+    </script>
+</body>
+</html>
