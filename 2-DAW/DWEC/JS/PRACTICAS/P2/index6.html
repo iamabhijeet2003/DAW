@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="piramide">
+
+    </div>
+
+    <!--
+        *********
+         *******
+          *****
+           ***
+            *
+    -->
+
+    <script>
+        let piramide = "";
+        let limite = 5;
+
+        for(i=limite; i>=1; i--){
+            let linea = "";
+            
+            for(let k=1;k<=limite-i;k++){
+                linea+="&nbsp;&nbsp;";
+            }
+            for(let j=i*2;j>=2;j--){
+                linea += "*";
+            }
+
+            piramide += linea + "<br>";
+        }
+        document.getElementById("piramide").innerHTML = piramide;
+    </script>
+</body>
+</html>

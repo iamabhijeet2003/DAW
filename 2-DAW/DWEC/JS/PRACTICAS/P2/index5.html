@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cuadrado"></div>
+    <!--
+        *****
+        *   *
+        *   *
+        *   *
+        *****
+    -->
+    <script>
+        let limite = 5;
+        let cuadrado = '';
+
+        for(i=1;i<=limite;i++){
+            let linea = '';
+
+            if(i==1||i==limite){
+                for(j=1;j<=limite;j++){
+                    linea += "*";
+                }
+            }else{
+                linea+="*";
+                for(j=2;j<=limite-1;j++){
+                    linea+="&nbsp;&nbsp;";
+                }
+                linea+="*";
+            }
+            cuadrado += linea + "<br>"
+        }
+
+        document.getElementById("cuadrado").innerHTML = cuadrado;
+        
+    </script>
+    
+</body>
+</html>
