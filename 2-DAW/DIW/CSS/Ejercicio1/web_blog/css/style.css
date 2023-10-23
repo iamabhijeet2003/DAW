@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 1em 1em;
+    background-color: rgb(249, 249, 85);
+}
+
+nav{
+    background-color: gray;
+    padding: 0.4em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    text-decoration: none   ;
+}
+
+nav ul li {
+    margin: 0 1em 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.contenido{
+    display: flex;
+    
+}
+
+.secciones{
+    flex: 3;
+    
+}
+
+.aside-derecha{
+    flex: 1;
+}
+
+section{
+    margin: 1em;
+    background-color: rgb(249, 249, 85) ;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+section h1{
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+}
+section h3{
+    padding-left: 1.5rem;
+}
+
+section small{
+    padding-left: 1.5rem;
+    color: gray;
+}
+
+section p{
+    padding-left: 1.5rem;
+    
+}
+
+section hr{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    
+}
+
+section figure {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border: 1px solid black;
+}
+
+section figure img {
+    width: 50px;
+}
+
+section figure figcaption{
+    font-style: italic;
+}
+
+.comentario {
+    text-align: right;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+
+
+aside{
+    background-color: lightgray;
+    height: 95px;
+
+    margin-top: 1rem;
+    
+  
+}
+
+aside div{
+    padding: 1.5rem 0 1.5rem 1.4rem;
+
+}
+
+
+footer{
+    text-align: center;
+    
+}
+
+footer p{
+    padding-top: 1em;
+}
