@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+        <div id='field'>
+            <header>
+                <p> Click the flowers, but avoid the wasps!</p>
+                <h2>flowers:<span class='flowers'>0</span></h1>
+                <h2>lives:<span class='lives'>5</span></h1>
+            </header>
+            <img id='bee' src='http://clipartix.com/wp-content/uploads/2016/04/Cute-bee-clipart-free-clipart-images-2.png' alt='bee'>
+            
+            <div class='flowers'>
+                <div id='flower1' class='flower'></div>
+                <div id='flower2' class='flower'></div>
+                <div id='flower3' class='flower'></div>
+            </div>
+    
+            <div class='enemies'>
+                <div class='wasp wasp1'>🐝</div>
+                <div class='wasp wasp2'>🐝</div>
+                <div class='wasp wasp3'>🐝</div>
+                <div class='wasp wasp4'>🐝</div>
+                <div id='bigWasp' class='wasp bigWasp'></div>
+            </div>
+          <h2 id='konamiEgg'></h2>
+            <footer>
+                <h2>Level<span class="level">1</span></h2>
+                <p>Code and design by Amie Everett © 2017 
+                  <a href='https://twitter.com/AmieEverett_'target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a>
+                    <a href='https://www.linkedin.com/in/amie-everett-0573a0144/' target='_blank'><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  </p>
+            </footer>
+            <aside>
+                <h1>Game Over 🙁</h1>
+                <p>You made it to level <span class='level'>1</span>!</p>
+                <div>
+                    <a class='tweet' href='' target='_blank'>Tweet your level</a>
+                    <button>Play again</button>
+                </div>
+            </aside>
+        </div>
+        <svg width='0' height='0'>
+            <defs>
+                <clipPath id='flowerClip'>
+                    <circle cx='30' cy='44' r='20'/>
+                    <circle cx='76' cy='52' r='20'/>
+                    <circle cx='70' cy='21' r='20'/>
+                    <circle cx='40' cy='20' r='20'/>
+                    <circle cx='50' cy='61' r='20'/>
+                </clipPath>
+            </defs>
+        </svg>
+    
+    
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+      <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
+        <script src='https://use.fontawesome.com/863f28bd20.js'></script>
+        <script src='scripts/script.js'></script>
+    
+    
+</body>
+</html>
