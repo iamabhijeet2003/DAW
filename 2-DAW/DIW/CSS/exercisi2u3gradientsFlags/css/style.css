@@ -1,0 +1,72 @@
+.flags{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.flag-france {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background: linear-gradient(to right, #EF4135 0%, #EF4135 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #0055A4 66.66%, #0055A4 100%);
+  }
+
+  .flag-japan {
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(circle at 50% 50%, #D71D24 0%, #D71D24 45%, #FFFFFF 45%, #FFFFFF 100%);
+    border: 1px solid #000000; 
+  }
+
+  .flag-poland {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%, #D4213D 50%, #D4213D 100%);
+    border: 1px solid black;
+  }
+  
+  .flag-italy{
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to right, #027816 0%, #027816 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #ff1100 66.66%, #ff1100 100%);
+    border: 1px solid black;
+}
+
+  .flag-germany {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to bottom, #000000 0%, #000000 33.33%, #FFCC29 33.33%, #FFCC29 66.66%, #D71D24 66.66%, #D71D24 100%);
+    border: 1px solid black;
+}
+  
+  .flag-colombia {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to bottom, #ffff00 0%, #ffff00 33.33%, #0048ff 33.33%, #0048ff 66.66%, #D71D24 66.66%, #D71D24 100%);
+    border: 1px solid black;
+}
+
+
+.flag-spain {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to bottom, #AA151B 0%, #AA151B 25%, #FFC400 25%, #FFC400 75%, #AA151B 75%, #AA151B 100%);
+    border: 1px solid black;
+}
+  
+img{
+    margin-top: 60px;
+    margin-left: 20px;
+    width: 70px;
+}
+
+
+  .flag-valencia {
+
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to right, blue 0 20% ,rgba(0,0,0,0) 10%, rgba(0,0,0,0) 70%),
+    repeating-linear-gradient(to bottom , yellow 0% 11%,red 11% 23% );
+    margin-bottom: 10px;
+  }
