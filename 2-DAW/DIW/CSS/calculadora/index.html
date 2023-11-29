@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="script.js"></script>
+   
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            
+        }
+
+        div#cosCalc {
+            width: 300px;
+            background-color: #3279a8;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        div#pantalla {
+            height: 40px;
+            background-color: #47a6e6;
+            border: 3px solid #000;
+            border-radius: 7px;
+            text-align: right;
+            padding: 10px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        div#botonera {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button.boton {
+            width: 100%;
+            height: 60px;
+            font-size: 20px;
+            background-color: #aaa;
+            border: 2px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.boton1 {
+            width: 100%;
+            height: 60px;
+            font-size: 20px;
+            background-color: #ff6a00;
+            border: 2px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    
+        button.boton:hover {
+            background-color: #888;
+        }
+
+        button.boton1:hover {
+            background-color: #9d4303;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cosCalc">
+        <div id="pantalla">
+            <span id="valor">0</span>
+        </div>
+        
+
+        <div id="botonera">
+            <button class="boton" id="b7" onclick="appendToDisplay('7')">7</button>
+            <button class="boton" id="b8" onclick="appendToDisplay('8')">8</button>
+            <button class="boton" id="b9" onclick="appendToDisplay('9')">9</button>
+            <button class="boton" id="b/" onclick="appendToDisplay('/')">/</button>
+
+           
+            <button class="boton" id="b4" onclick="appendToDisplay('4')">4</button>
+            <button class="boton" id="b5" onclick="appendToDisplay('5')">5</button>
+            <button class="boton" id="b6" onclick="appendToDisplay('6')">6</button>
+            <button class="boton" id="bX" onclick="appendToDisplay('*')">*</button>
+
+            <button class="boton" id="b1" onclick="appendToDisplay('1')">1</button>
+            <button class="boton" id="b2" onclick="appendToDisplay('2')">2</button>
+            <button class="boton" id="b3" onclick="appendToDisplay('3')">3</button>
+            <button class="boton" id="b-" onclick="appendToDisplay('-')">-</button>
+
+           
+
+            <button class="boton" id="b0" onclick="appendToDisplay('0')">0</button>
+            <button class="boton" id="b." onclick="appendToDisplay('.')">.</button>
+            <button class="boton" id="b+" onclick="appendToDisplay('+')">+</button>
+            <button class="boton1" id="b=" onclick="calculateResult()">=</button>
+
+           <button class="boton1" id="bDel" onclick="deleteLastCharacter()">DEL</button>
+           <button class="boton2">RESET</button>
+
+           
+            <button class="boton" id="bSign" onclick="toggleSign()">+/-</button>
+
+
+        </div>
+    </div>
+</body>
+</html>
