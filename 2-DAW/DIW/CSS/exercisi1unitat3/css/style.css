@@ -1,0 +1,84 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.caja {
+    width: 300px;
+    height: 300px;
+    background-color: #b7adad;
+    
+    cursor: pointer;
+    border: 2px black solid;
+}
+.caja:nth-child(3n + 1) {
+    grid-column: 1;
+    
+}
+
+.caja:nth-child(3n + 2) {
+    grid-column: 2;
+}
+
+.caja:nth-child(3n + 3) {
+    grid-column: 3;
+}
+
+
+#caja1{
+    border: 4px solid black;
+    text-align: center;
+    font-size: large;
+    
+}
+
+#caja2 {
+    box-shadow: 3px 3px 6px black, -3px -3px 6px black;
+}
+
+#caja3{
+    box-shadow: 6px 6px 6px black, -2px -2px 2px black;
+}
+#caja4 {
+    box-shadow: 6px 5px 0px 5px black;
+}
+
+#caja5{
+    box-shadow: 6px 5px 10px 2px  black;
+}
+
+#caja6{
+    box-shadow: 5px 6px 0px 2px black;
+}
+#caja7{
+    border: 4px solid black;
+    text-align: center;
+    font-size: large;
+    
+}
+
+
+
+#caja8 {
+    box-shadow: 3px 3px 6px black, -3px -3px 6px black;
+}
+
+#caja9{
+    box-shadow: -6px -6px 4px black, 2px 2px 2px black;
+}
+
+#caja10 {
+    box-shadow: -6px -5px 0px 5px black;
+}
+
+#caja11{
+    box-shadow: -6px -5px 10px 2px  black;
+}
+
+#caja12{
+    box-shadow: -5px -6px 0px -2px black;
+}
