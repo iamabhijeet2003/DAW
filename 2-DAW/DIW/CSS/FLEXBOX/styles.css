@@ -1,0 +1,32 @@
+.box{
+    font-size: 35px;
+    padding: 15px;
+}
+
+.box-1{
+    background-color: aqua;
+}
+.box-2{
+    background-color: greenyellow;
+}
+.box-3{
+    background-color: gold;
+    align-self:flex-end;
+}
+.box-4{
+    background-color: green;
+    align-items: flex-end;
+}
+.box-5{
+    background-color: yellowgreen;
+    flex-shrink: 10px;
+}   
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap-reverse;
+    align-content:center ;
+   
+    border: 1px solid red;
+}
