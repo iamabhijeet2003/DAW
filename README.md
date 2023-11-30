@@ -32,7 +32,7 @@ Duración total: 2000 horas (incluyendo el módulo de formación en centros de t
 | Formación y Orientación Laboral                       | 90    |
 | Inglés                                               | 90    |
 |||
-|                                                     Horas totales  | 940    |
+|                                                     Horas totales  | 960    |
 
 | Segundo Curso                                               | Horas |
 |------------------------------------------------------|-------|
@@ -45,7 +45,7 @@ Duración total: 2000 horas (incluyendo el módulo de formación en centros de t
 | Inglés                                               | 40    |
 | Formación en centros de trabajo                       | 400   |
 |||
-|                                                     Horas totales  | 1060    |
+|                                                     Horas totales  | 1040    |
 
 
 ## Contacto
