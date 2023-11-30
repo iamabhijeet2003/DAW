@@ -1,5 +1,7 @@
 # DAW
+![](https://i.imgur.com/waxVImv.png)
 # Repositorio de Desarrollo de Aplicaciones Web (DAW)
+![](https://i.imgur.com/waxVImv.png)
 
 Este repositorio contiene una colección de recursos y proyectos relacionados con mi formación en el Grado Superior de Desarrollo de Aplicaciones Web (DAW). Aquí encontrarás material correspondiente a los dos cursos del programa.
 
@@ -17,6 +19,7 @@ Este repositorio contiene una colección de recursos y proyectos relacionados co
 ## Duración Total del Ciclo
 Duración total: 2000 horas (incluyendo el módulo de formación en centros de trabajo)
 
+![](https://i.imgur.com/waxVImv.png)
 ## Distribución por Cursos
 
 | Primer Curso                                               | Horas |
