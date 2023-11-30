@@ -28,7 +28,8 @@ Duración total: 2000 horas (incluyendo el módulo de formación en centros de t
 | Entornos de desarrollo                               | 90    |
 | Formación y Orientación Laboral                       | 90    |
 | Inglés                                               | 90    |
-
+|||
+|                                                     Horas totales  | 940    |
 
 | Segundo Curso                                               | Horas |
 |------------------------------------------------------|-------|
@@ -40,7 +41,8 @@ Duración total: 2000 horas (incluyendo el módulo de formación en centros de t
 | Empresa e iniciativa emprendedora                     | 60    |
 | Inglés                                               | 40    |
 | Formación en centros de trabajo                       | 400   |
-
+|||
+|                                                     Horas totales  | 1060    |
 
 
 ## Contacto
