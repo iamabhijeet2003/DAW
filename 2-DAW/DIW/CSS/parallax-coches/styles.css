@@ -1,0 +1,25 @@
+body,html{
+    height: 100%;
+    margin:0;
+}
+
+#one{
+    background-color: red;
+    width: 100%;
+    height: 400px;
+}
+#two{
+    background-color: blue;
+    width: 100%;
+    height: 400px;
+}
+
+.central{
+    background: url(cars_parallax1.png),url(cars_parallax2.png);
+    background-color: #dff1fd;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-attachment: fixed,local  ;
+    background-position: center;
+}
