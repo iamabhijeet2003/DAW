@@ -1,0 +1,26 @@
+//Estudia la siguiente función recursiva que recibe un número decimal y lo convierte en binario, 
+mostrando el resultado por pantalla. 
+void a_binario(int n) { 
+    if (n<=1)
+        System.out.printf("%d", n); 
+    else{
+        a_binario(n/2);
+        System.out.printf("%d", n%2);
+    }
+}
+
+Esta función convierte un número entero decimal (base 10) 
+en su representación binaria (base 2) utilizando una técnica recursiva.
+La función a_binario toma como entrada un número entero n y lo divide 
+repetidamente entre 2 hasta que el resultado es 1 o 0. 
+Luego, imprime el resto de la división (0 o 1) en cada iteración. 
+De esta manera, el resultado final es la representación binaria del número original.
+
+Por ejemplo, si pasamos el número 13 como argumento a la función a_binario,
+la función hará lo siguiente:
+
+Divide 13 entre 2 y obtiene el resultado 6 con un resto de 1.
+Divide 6 entre 2 y obtiene el resultado 3 con un resto de 0.
+Divide 3 entre 2 y obtiene el resultado 1 con un resto de 1.
+Como el resultado es 1, imprime 1 y sale de la función recursiva.
+Como resultado final, la representación binaria de 13 es 1101.
