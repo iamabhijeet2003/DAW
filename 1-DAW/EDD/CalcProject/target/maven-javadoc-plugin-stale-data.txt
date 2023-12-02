@@ -1,0 +1,25 @@
+cmd.exe
+/X
+/C
+""C:\Program Files\Java\jdk-11.0.9\bin\javadoc.exe" @options @packages"
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\allclasses-index.html = 1616351546209
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\allclasses.html = 1616351546225
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\allpackages-index.html = 1616351546209
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\constant-values.html = 1616351546129
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\deprecated-list.html = 1616351546209
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\element-list = 1616351546114
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\help-doc.html = 1616351546240
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\index-all.html = 1616351546193
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\index.html = 1616351546240
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\member-search-index.js = 1616351546193
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\member-search-index.zip = 1616351546193
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\options = 1616351545103
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\overview-tree.html = 1616351546145
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\package-search-index.js = 1616351546161
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\package-search-index.zip = 1616351546176
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\packages = 1616351545103
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\script.js = 1616351546240
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\search.js = 1616351546240
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\stylesheet.css = 1616351546240
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\type-search-index.js = 1616351546176
+C:\Users\fidel\Documents\NetBeansProjects\CalcProject\target\site\apidocs\type-search-index.zip = 1616351546193
