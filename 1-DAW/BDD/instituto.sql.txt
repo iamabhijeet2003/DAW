@@ -1,0 +1,310 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 15-02-2023 a las 16:51:22
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 8.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `instituto`
+--
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `examen1` (IN `x` INT)  BEGIN
+SELECT modul.nomModul FROM modul
+WHERE modul.semestreModul = semestre;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `examen2` (IN `xsemestre` INT, IN `xhores` INT)  BEGIN
+SELECT * FROM modul WHERE modul.semestreModul = xsemestre AND modul.horestModul >= xhores;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `recup05` (IN `quants` INT)  BEGIN
+DECLARE comptador INT DEFAULT 0;
+bucle: WHILE comptador < quants DO
+  INSERT INTO modul VALUES(NULL, 'Mòdul nou',2,50,50,50);
+  SET comptador = comptador + 1;
+END WHILE bucle;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `recup07` (IN `xalum1` INT, IN `xalum2` INT)  BEGIN
+DECLARE existeix1 INT;
+DECLARE existeix2 INT;
+SELECT COUNT(*) INTO existeix1 FROM alumne
+   WHERE alumne.idAlumne=xalum1;
+SELECT COUNT(*) INTO existeix2 FROM alumne 
+   WHERE alumne.idAlumne=xalum2;
+IF existeix1=0 OR existeix2=0 THEN
+   SELECT "Algun alumne no existeix";
+ELSE
+   IF(recup04(xalum1) > recup04(xalum2)) THEN
+      SELECT "El primer té més nota";
+   ELSEIF(recup04(xalum1) < recup04(xalum2)) THEN
+      SELECT "El segon té més nota";
+   ELSE
+      SELECT "Els dos tenen la mateixa nota";
+   END IF;
+END IF;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `repas04` (IN `c` INT, OUT `ht` INT, OUT `hp` INT)  BEGIN
+    SELECT horestModul INTO ht
+	FROM `modul` WHERE idModul=c;
+	SELECT horespModul INTO hp
+	FROM `modul` WHERE idModul=c;
+END$$
+
+--
+-- Funciones
+--
+CREATE DEFINER=`root`@`localhost` FUNCTION `examen03` (`xmodul` VARCHAR(20)) RETURNS INT(11) BEGIN
+DECLARE resultat INT;
+SELECT horestModul+horespModul+horeslModul INTO resultat FROM `modul` WHERE nomModul=xmodul;
+RETURN resultat;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `recup04` (`xalumne` INT) RETURNS INT(11) BEGIN
+DECLARE resultat INT;
+SELECT MAX(matricula.notaMatricula) INTO resultat 
+FROM matricula
+where matricula.idAlumne = xalumne;
+RETURN resultat;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `recup06` (`num1` INT, `num2` INT) RETURNS INT(11) BEGIN
+DECLARE resultat INT DEFAULT 0;
+IF num1 >= num2 THEN 
+   SET resultat = 0;
+ELSE
+   bucle: WHILE num1 <= num2 DO
+      IF MOD(num1, 5)=0 THEN 
+         SET resultat = resultat+1;
+      END IF;
+      SET num1=num1+1;
+   END WHILE bucle;
+END IF;
+RETURN resultat;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `repas01` (`m` INT) RETURNS INT(11) BEGIN
+DECLARE resultat INT;
+SELECT horestModul INTO resultat 
+FROM `modul` WHERE idModul=m;
+RETURN resultat;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `repas02` (`m` INT, `lletra` VARCHAR(1)) RETURNS INT(11) BEGIN
+DECLARE resultat INT;
+IF lletra = "T" THEN
+	SELECT horestModul INTO resultat 
+	FROM `modul` WHERE idModul=m;
+ELSEIF lletra="P" THEN
+	SELECT horespModul INTO resultat 
+	FROM `modul` WHERE idModul=m;
+END IF;
+RETURN resultat;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `repas03` (`c` INT, `n` VARCHAR(20)) RETURNS INT(11) BEGIN
+DECLARE resultat INT;
+DECLARE nomverdader VARCHAR(20);
+SELECT modul.nomModul INTO nomverdader 
+FROM modul
+WHERE modul.idModul=c;
+IF nomverdader=n THEN
+	SET resultat=1;
+ELSE
+	SET resultat=0;
+END IF;
+RETURN resultat;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `repas05` (`s` INT) RETURNS INT(11) BEGIN
+DECLARE resultat INT;
+SELECT count(*) INTO resultat FROM `modul`
+	WHERE modul.semestreModul=s;
+RETURN resultat;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `repas06` (`xalumne` INT, `xmodul` INT) RETURNS INT(11) BEGIN
+INSERT INTO matricula
+VALUES(xalumne,xmodul,0);
+RETURN 0;
+END$$
+
+CREATE DEFINER=`root`@`localhost` FUNCTION `REPAS07` (`xalumne` INT, `xmodul` INT) RETURNS INT(11) BEGIN
+DECLARE resultat INT;
+DECLARE existalumne INT;
+DECLARE existmodul INT;
+DECLARE existmatricula INT;
+SELECT COUNT(*) INTO existalumne FROM alumne 
+WHERE idAlumne = xalumne;
+SELECT COUNT(*) INTO existmodul FROM modul 
+WHERE idModul = xmodul;
+SELECT COUNT(*) INTO existmatricula FROM matricula 
+WHERE idModul = xmodul AND idAlumne = xAlumne;
+IF existalumne = 1 AND existmodul=1 AND existmatricula=0 
+THEN 
+   INSERT INTO matricula VALUES(xalumne,xmodul,0);
+   SET resultat=1;
+ELSE
+   SET resultat=0;
+END IF;
+RETURN resultat;
+END$$
+
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alumne`
+--
+
+CREATE TABLE `alumne` (
+  `idAlumne` int(11) NOT NULL,
+  `nomAlumne` varchar(25) COLLATE utf8_spanish2_ci NOT NULL,
+  `estudis` enum('FP2','COU','BATX','ALTRES') COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `alumne`
+--
+
+INSERT INTO `alumne` (`idAlumne`, `nomAlumne`, `estudis`) VALUES
+(1, 'Fidel Oltra', 'BATX'),
+(2, 'David Sanz', 'COU'),
+(3, 'Mercedes Rodríguez', 'FP2'),
+(4, 'Alex Sánchez', 'FP2'),
+(5, 'Lola Vázquez', 'ALTRES'),
+(6, 'Juana Sánchez Gómez', 'ALTRES');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `matricula`
+--
+
+CREATE TABLE `matricula` (
+  `idAlumne` int(11) NOT NULL,
+  `idModul` int(11) NOT NULL,
+  `notaMatricula` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `matricula`
+--
+
+INSERT INTO `matricula` (`idAlumne`, `idModul`, `notaMatricula`) VALUES
+(1, 1, 5),
+(1, 2, 7),
+(1, 3, 10),
+(2, 3, 4),
+(2, 4, 8),
+(3, 1, 4),
+(3, 2, 2),
+(4, 1, 7),
+(4, 2, 6),
+(5, 4, 7),
+(6, 1, 7),
+(6, 2, 0),
+(6, 3, 0),
+(6, 4, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `modul`
+--
+
+CREATE TABLE `modul` (
+  `idModul` int(11) NOT NULL,
+  `nomModul` varchar(15) COLLATE utf8_spanish2_ci NOT NULL,
+  `yearModul` enum('1','2') COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `modul`
+--
+
+INSERT INTO `modul` (`idModul`, `nomModul`, `yearModul`) VALUES
+(1, 'PROG', '1'),
+(2, 'EED', '1'),
+(3, 'DWES', '2'),
+(4, 'DWEC', '2'),
+(5, 'DIW', '2'),
+(6, 'LLGMSI', '1'),
+(7, 'EIE', '2'),
+(8, 'DAW', '2'),
+(9, 'FOL', '1');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `alumne`
+--
+ALTER TABLE `alumne`
+  ADD PRIMARY KEY (`idAlumne`);
+
+--
+-- Indices de la tabla `matricula`
+--
+ALTER TABLE `matricula`
+  ADD PRIMARY KEY (`idAlumne`,`idModul`) USING BTREE,
+  ADD KEY `idAlumne` (`idAlumne`),
+  ADD KEY `idModul` (`idModul`);
+
+--
+-- Indices de la tabla `modul`
+--
+ALTER TABLE `modul`
+  ADD PRIMARY KEY (`idModul`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `alumne`
+--
+ALTER TABLE `alumne`
+  MODIFY `idAlumne` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `modul`
+--
+ALTER TABLE `modul`
+  MODIFY `idModul` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22118;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `matricula`
+--
+ALTER TABLE `matricula`
+  ADD CONSTRAINT `matricula_ibfk_1` FOREIGN KEY (`idAlumne`) REFERENCES `alumne` (`idAlumne`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `matricula_ibfk_2` FOREIGN KEY (`idModul`) REFERENCES `modul` (`idModul`) ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
