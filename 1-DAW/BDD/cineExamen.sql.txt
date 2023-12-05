@@ -1,0 +1,332 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 06-06-2023 a las 19:16:56
+-- Versión del servidor: 10.4.18-MariaDB
+-- Versión de PHP: 8.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `cine`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `actor`
+--
+
+CREATE TABLE `actor` (
+  `id` int(11) NOT NULL,
+  `Nom` varchar(45) NOT NULL,
+  `Any_Naixement` varchar(45) NOT NULL,
+  `pelis` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `actor`
+--
+
+INSERT INTO `actor` (`id`, `Nom`, `Any_Naixement`, `pelis`) VALUES
+(1, 'Harrison Fordd', '1943', 4),
+(2, 'Mark Hamill', '1951', 5),
+(3, 'Carrie Fisher', '1956', 5),
+(4, 'Alec Guinness', '1914', 1),
+(5, 'Liam Neeson', '1952', 1),
+(6, 'Ewan McGregor', '1984', 3),
+(7, 'Hayden Christiansen', '1981', 2),
+(8, 'Natalie Portman', '1981', 3),
+(9, 'Daisy Ridley', '1992', 2),
+(10, 'John Boyega', '1992', 2),
+(11, 'Felicity Jones', '1983', 1),
+(12, 'Diego Luna', '1979', 1),
+(13, 'Alden Ehrenreich', '1989', 1),
+(14, 'Emilia Clarke', '1986', 1),
+(15, 'Leonardo DiCaprio', '1966', 1),
+(16, 'Jack Nicholson', '1940', 0),
+(17, 'Johnny Garcia', '1950', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `actor_peli`
+--
+
+CREATE TABLE `actor_peli` (
+  `Actor` int(11) NOT NULL,
+  `Peli` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `actor_peli`
+--
+
+INSERT INTO `actor_peli` (`Actor`, `Peli`) VALUES
+(1, 4),
+(1, 5),
+(1, 6),
+(1, 7),
+(2, 4),
+(2, 5),
+(2, 6),
+(2, 7),
+(2, 8),
+(3, 4),
+(3, 5),
+(3, 6),
+(3, 7),
+(3, 8),
+(4, 4),
+(5, 1),
+(6, 1),
+(6, 2),
+(6, 3),
+(7, 2),
+(7, 3),
+(8, 1),
+(8, 2),
+(8, 3),
+(9, 7),
+(9, 8),
+(10, 7),
+(10, 8),
+(11, 9),
+(12, 9),
+(13, 10),
+(14, 10),
+(15, 11),
+(17, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `any`
+--
+
+CREATE TABLE `any` (
+  `idAny` int(11) NOT NULL,
+  `pelis` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `any`
+--
+
+INSERT INTO `any` (`idAny`, `pelis`) VALUES
+(1975, 1),
+(1977, 2),
+(1980, 1),
+(1981, 1),
+(1984, 1),
+(1992, 1),
+(1999, 1),
+(2002, 2),
+(2005, 1),
+(2015, 1),
+(2016, 1),
+(2017, 1),
+(2018, 1),
+(2023, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `director`
+--
+
+CREATE TABLE `director` (
+  `Nom` varchar(255) NOT NULL,
+  `Any_Naixement` varchar(45) NOT NULL,
+  `iddirector` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `director`
+--
+
+INSERT INTO `director` (`Nom`, `Any_Naixement`, `iddirector`) VALUES
+('George Lucas', '1944', 1),
+('JJ Abrams', '1966', 2),
+('Rian Johnson', '1973', 3),
+('Ron Howard', '1954', 4),
+('Gareth Edwards', '1975', 5),
+('James Cameron', '1950', 6),
+('Steven Spielberg', '1944', 7);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pelis`
+--
+
+CREATE TABLE `pelis` (
+  `idPelis` int(11) NOT NULL,
+  `iddirector` int(11) NOT NULL,
+  `Titol` varchar(45) NOT NULL,
+  `Any` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `pelis`
+--
+
+INSERT INTO `pelis` (`idPelis`, `iddirector`, `Titol`, `Any`) VALUES
+(1, 7, 'La Amenaza Fantasma', '1999'),
+(2, 1, 'El Ataque de los Clones', '2002'),
+(3, 1, 'La Venganza de los Sith', '2005'),
+(4, 1, 'Una Nueva Esperanza', '1977'),
+(5, 1, 'El Imperio Contraataca', '1977'),
+(6, 1, 'El Retorno del Jedi', '1984'),
+(7, 2, 'El Despertar de la Fuerza', '2015'),
+(8, 3, 'Los Últimos Jedi', '2017'),
+(9, 5, 'Rogue One: A Star Wars Story', '2016'),
+(10, 4, 'Solo: A Star Wars Story', '2018'),
+(11, 6, 'Titanic', '1992'),
+(12, 7, 'Tiburón', '2002'),
+(14, 1, 'Pelicula arreu', '1975'),
+(16, 5, 'Qualsevol coosa', '1976'),
+(17, 5, 'pELI1', '1980'),
+(18, 6, 'pELI2', '1981');
+
+--
+-- Disparadores `pelis`
+--
+DELIMITER $$
+CREATE TRIGGER `practica01` BEFORE INSERT ON `pelis` FOR EACH ROW IF NEW.any > 2023 THEN
+SET NEW.any = 2023;
+END IF
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `practica02` BEFORE UPDATE ON `pelis` FOR EACH ROW IF NEW.any > 2023 THEN
+SET NEW.any = OLD.any;
+END IF
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `practica03_01` AFTER INSERT ON `pelis` FOR EACH ROW BEGIN
+DECLARE existe INT;
+SELECT COUNT(*) INTO existe FROM any WHERE any.idAny=NEW.any;
+IF existe = 1 THEN
+	UPDATE any SET any.pelis=any.pelis+1
+	WHERE any.idAny=NEW.any;
+ELSE
+	INSERT INTO any VALUES(NEW.any,1);
+END IF;
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `practica03_02` AFTER DELETE ON `pelis` FOR EACH ROW UPDATE any SET any.pelis=any.pelis-1
+	WHERE any.idAny=OLD.any
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `practica03_03` AFTER UPDATE ON `pelis` FOR EACH ROW BEGIN
+DECLARE existe INT;
+UPDATE any SET any.pelis=any.pelis-1
+	WHERE any.idAny=OLD.any;
+SELECT COUNT(*) INTO existe FROM any WHERE any.idAny=NEW.any;
+IF existe = 1 THEN
+	UPDATE any SET any.pelis=any.pelis+1
+	WHERE any.idAny=NEW.any;
+ELSE
+	INSERT INTO any VALUES(NEW.any,1);
+END IF;
+END
+$$
+DELIMITER ;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `actor`
+--
+ALTER TABLE `actor`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
+-- Indices de la tabla `actor_peli`
+--
+ALTER TABLE `actor_peli`
+  ADD PRIMARY KEY (`Actor`,`Peli`),
+  ADD KEY `Actor` (`Actor`),
+  ADD KEY `Actor_Peli_ibfk_2` (`Peli`);
+
+--
+-- Indices de la tabla `any`
+--
+ALTER TABLE `any`
+  ADD PRIMARY KEY (`idAny`);
+
+--
+-- Indices de la tabla `director`
+--
+ALTER TABLE `director`
+  ADD PRIMARY KEY (`iddirector`);
+
+--
+-- Indices de la tabla `pelis`
+--
+ALTER TABLE `pelis`
+  ADD PRIMARY KEY (`idPelis`),
+  ADD KEY `idPelis` (`idPelis`),
+  ADD KEY `iddirector` (`iddirector`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `actor`
+--
+ALTER TABLE `actor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT de la tabla `director`
+--
+ALTER TABLE `director`
+  MODIFY `iddirector` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `pelis`
+--
+ALTER TABLE `pelis`
+  MODIFY `idPelis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `actor_peli`
+--
+ALTER TABLE `actor_peli`
+  ADD CONSTRAINT `Actor_Peli_ibfk_1` FOREIGN KEY (`Actor`) REFERENCES `actor` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `Actor_Peli_ibfk_2` FOREIGN KEY (`Peli`) REFERENCES `pelis` (`idPelis`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `pelis`
+--
+ALTER TABLE `pelis`
+  ADD CONSTRAINT `pelis_ibfk_1` FOREIGN KEY (`iddirector`) REFERENCES `director` (`iddirector`) ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

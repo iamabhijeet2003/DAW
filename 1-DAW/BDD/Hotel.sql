@@ -1,0 +1,432 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost
+-- Tiempo de generación: 06-06-2023 a las 17:52:06
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `Hotel`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alumne`
+--
+
+CREATE TABLE `alumne` (
+  `idAlumne` int(11) NOT NULL,
+  `nomAlumne` varchar(25) NOT NULL,
+  `estudis` enum('FP2','COU','BATX','ALTRES') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `alumne`
+--
+
+INSERT INTO `alumne` (`idAlumne`, `nomAlumne`, `estudis`) VALUES
+(1, 'Fidel Oltra', 'BATX'),
+(2, 'David Sanz', 'COU'),
+(3, 'Mercedes Rodríguez', 'FP2'),
+(4, 'Alex Sánchez', 'FP2'),
+(5, 'Lola Vázquez', 'ALTRES'),
+(6, 'Juana Sánchez Gómez', 'ALTRES');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `client`
+--
+
+CREATE TABLE `client` (
+  `idclient` int(11) NOT NULL,
+  `nif` varchar(15) NOT NULL,
+  `nom` varchar(25) NOT NULL,
+  `cognoms` varchar(35) NOT NULL,
+  `cpoblacio` varchar(35) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `client`
+--
+
+INSERT INTO `client` (`idclient`, `nif`, `nom`, `cognoms`, `cpoblacio`) VALUES
+(1, '123456789A', 'Lionel', 'Messi', 'Barcelona'),
+(2, '89121023T', 'Andrés', 'Iniesta', 'Albacete'),
+(3, '123456780B', 'Pepe', 'González', 'Sueca'),
+(4, '79123024X', 'Cristiano', 'Ronaldo', 'Madrid'),
+(5, '89123123X', 'José Luis', 'Gayá', 'Valencia'),
+(6, '12312333P', 'Carlos', 'Soler', 'Mislata'),
+(7, '88333222K', 'Javi', 'Gracia', 'Alfafar');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `empleat`
+--
+
+CREATE TABLE `empleat` (
+  `idEmp` int(11) NOT NULL,
+  `nomEmp` varchar(25) NOT NULL,
+  `cognomEmp` varchar(25) NOT NULL,
+  `ofiEmp` varchar(25) CHARACTER SET utf8 COLLATE utf8_spanish2_ci NOT NULL,
+  `souEmp` int(11) NOT NULL,
+  `idHotel` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `empleat`
+--
+
+INSERT INTO `empleat` (`idEmp`, `nomEmp`, `cognomEmp`, `ofiEmp`, `souEmp`, `idHotel`) VALUES
+(1, 'Brian', 'Wilson', 'Conserge', 1000, 1),
+(2, 'Pete ', 'Townshend', 'Directiu', 850, 2),
+(3, 'John', 'Lennon', 'Pintor', 900, 1),
+(4, 'Paul ', 'McCartney', 'Directiu', 900, 2),
+(5, 'Frank', 'Sinatra', 'Conserge', 800, 1),
+(6, 'Johnny', 'Cash', 'Fontaner', 1000, 1),
+(7, 'Joan', 'Báez', 'Conserge', 888, 2),
+(8, 'Chuck', 'Norris', 'Pintor', 234, 4),
+(9, 'Liz', 'Taylor', 'Pintor', 444, 4),
+(10, 'Marta', 'Sánchez', 'Pintor', 900, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `habitacio`
+--
+
+CREATE TABLE `habitacio` (
+  `idhotel` int(11) NOT NULL,
+  `idhabitacio` int(11) NOT NULL,
+  `m2` decimal(10,2) NOT NULL,
+  `preu` decimal(10,2) NOT NULL,
+  `llits` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `habitacio`
+--
+
+INSERT INTO `habitacio` (`idhotel`, `idhabitacio`, `m2`, `preu`, `llits`) VALUES
+(1, 1, 31.25, 110.10, 0),
+(1, 2, 40.00, 130.00, 3),
+(1, 3, 120.25, 120.00, 3),
+(1, 4, 40.00, 90.25, 1),
+(1, 5, 41.50, 85.00, 1),
+(2, 1, 51.25, 65.36, 1),
+(2, 2, 15.50, 27.25, 2),
+(2, 3, 34.75, 49.00, 2),
+(2, 4, 33.00, 55.00, 2),
+(2, 5, 25.25, 50.25, 2),
+(2, 6, 50.25, 65.10, 1),
+(2, 7, 32.00, 55.00, 3),
+(2, 8, 28.00, 50.50, 1),
+(3, 1, 31.00, 50.00, 2),
+(3, 2, 33.25, 50.00, 1),
+(3, 3, 34.65, 50.00, 1),
+(3, 4, 44.65, 50.00, 2),
+(4, 1, 110.25, 120.00, 3),
+(4, 2, 80.00, 108.00, 2),
+(4, 3, 120.00, 150.50, 2),
+(4, 4, 111.25, 140.10, 1),
+(5, 1, 60.33, 66.00, 3),
+(5, 2, 62.00, 60.26, 2),
+(5, 3, 38.00, 50.00, 2),
+(6, 1, 51.50, 55.55, 1),
+(6, 2, 83.25, 100.10, 3),
+(6, 3, 61.15, 75.00, 2),
+(6, 4, 100.00, 500.00, 5),
+(6, 5, 40.00, 120.00, 3),
+(6, 6, 100.00, 100.00, 2),
+(7, 1, 100.00, 60.00, 2),
+(7, 2, 100.00, 60.00, 2),
+(7, 3, 100.00, 60.00, 2),
+(8, 1, 100.00, 90.00, 2),
+(8, 2, 100.00, 90.00, 2),
+(8, 3, 100.00, 90.00, 2),
+(8, 4, 100.00, 90.00, 2),
+(8, 5, 100.00, 90.00, 2),
+(8, 6, 100.00, 100.00, 2),
+(8, 7, 100.00, 100.00, 2),
+(8, 8, 100.00, 100.00, 2),
+(8, 9, 100.00, 100.00, 2),
+(8, 10, 100.00, 100.00, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `hotel`
+--
+
+CREATE TABLE `hotel` (
+  `idhotel` int(11) NOT NULL,
+  `hnom` varchar(25) NOT NULL,
+  `hdir` varchar(30) NOT NULL,
+  `hcpostal` varchar(5) NOT NULL,
+  `hpob` varchar(25) NOT NULL,
+  `hprov` varchar(25) NOT NULL,
+  `htel` varchar(12) NOT NULL,
+  `hcat` enum('1','2','3','4','5') NOT NULL,
+  `habitaciones` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `hotel`
+--
+
+INSERT INTO `hotel` (`idhotel`, `hnom`, `hdir`, `hcpostal`, `hpob`, `hprov`, `htel`, `hcat`, `habitaciones`) VALUES
+(1, 'Hotel Colón', 'Plaça Colón, 1', '46600', 'Alzira', 'Valencia', '962342343', '5', 5),
+(2, 'Pensió Pepe', 'C/ La Mar 14', '46400', 'Cullera', 'Valencia', '961743204', '1', 8),
+(3, 'Les Palmeres', 'C/ La Pau, 11', '46410', 'Sueca', 'Valencia', '97324234', '3', 4),
+(4, 'Sicania', 'Avda. Les Palmeres, 88', '46666', 'Cullera', 'Valencia', '962020202', '4', 4),
+(5, 'Pensió Fidel', 'C/ Major, 12', '46418', 'Fortaleny', 'Valencia', '961701199', '3', 3),
+(6, 'Casa Lolita', 'C/ Nou, 14', '46410', 'Sueca', 'Valencia', '961702312', '2', 6),
+(7, 'Hotel 7', 'Carrer 7', '46410', 'Sueca', 'Valencia', '777777', '5', 3),
+(8, 'Pensió Pepa', 'C/Alzira, 10', '46400', 'Cullera', 'Valencia', '1231231', '2', 10);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `matricula`
+--
+
+CREATE TABLE `matricula` (
+  `idAlumne` int(11) NOT NULL,
+  `idModul` int(11) NOT NULL,
+  `notaMatricula` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `matricula`
+--
+
+INSERT INTO `matricula` (`idAlumne`, `idModul`, `notaMatricula`) VALUES
+(1, 1, 5),
+(1, 2, 7),
+(1, 3, 10),
+(2, 3, 4),
+(2, 4, 8),
+(3, 1, 4),
+(3, 2, 2),
+(4, 1, 7),
+(4, 2, 6),
+(5, 4, 7),
+(6, 1, 7),
+(6, 2, 0),
+(6, 3, 0),
+(6, 4, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `modul`
+--
+
+CREATE TABLE `modul` (
+  `idModul` int(11) NOT NULL,
+  `nomModul` varchar(15) NOT NULL,
+  `yearModul` enum('1','2') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `modul`
+--
+
+INSERT INTO `modul` (`idModul`, `nomModul`, `yearModul`) VALUES
+(1, 'PROG', '1'),
+(2, 'EED', '1'),
+(3, 'DWES', '2'),
+(4, 'DWEC', '2'),
+(5, 'DIW', '2'),
+(6, 'LLGMSI', '1'),
+(7, 'EIE', '2'),
+(8, 'DAW', '2'),
+(9, 'FOL', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `reserva`
+--
+
+CREATE TABLE `reserva` (
+  `idreserva` int(11) NOT NULL,
+  `idclient` int(11) NOT NULL,
+  `idhotel` int(11) NOT NULL,
+  `idhabitacio` int(11) NOT NULL,
+  `dedata` date NOT NULL,
+  `adata` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `reserva`
+--
+
+INSERT INTO `reserva` (`idreserva`, `idclient`, `idhotel`, `idhabitacio`, `dedata`, `adata`) VALUES
+(1, 1, 1, 1, '2021-02-28', '2021-03-10'),
+(50, 1, 2, 1, '2021-02-28', '2021-03-10'),
+(51, 2, 1, 2, '2021-03-28', '2021-03-10'),
+(52, 2, 4, 2, '2021-04-28', '2021-03-10'),
+(53, 3, 5, 1, '2021-05-28', '2021-03-10'),
+(54, 3, 6, 1, '2021-06-28', '2021-03-10'),
+(55, 4, 3, 4, '2021-02-11', '2021-03-11'),
+(56, 4, 3, 3, '2021-04-12', '2021-04-22'),
+(57, 4, 4, 2, '2021-02-28', '2021-03-10'),
+(58, 5, 1, 1, '2021-02-28', '2021-03-10'),
+(59, 5, 2, 3, '2021-02-28', '2021-03-10'),
+(60, 5, 3, 1, '2021-02-28', '2021-03-10'),
+(61, 5, 5, 1, '2021-02-28', '2021-03-10'),
+(62, 6, 1, 1, '2021-02-28', '2021-03-10'),
+(63, 6, 1, 2, '2021-02-28', '2021-03-10'),
+(64, 6, 1, 3, '2021-02-28', '2021-03-10'),
+(65, 6, 1, 4, '2021-02-28', '2021-03-10');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `alumne`
+--
+ALTER TABLE `alumne`
+  ADD PRIMARY KEY (`idAlumne`);
+
+--
+-- Indices de la tabla `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`idclient`),
+  ADD UNIQUE KEY `nif` (`nif`);
+
+--
+-- Indices de la tabla `empleat`
+--
+ALTER TABLE `empleat`
+  ADD PRIMARY KEY (`idEmp`),
+  ADD KEY `idHotel` (`idHotel`);
+
+--
+-- Indices de la tabla `habitacio`
+--
+ALTER TABLE `habitacio`
+  ADD PRIMARY KEY (`idhotel`,`idhabitacio`),
+  ADD KEY `idhotel` (`idhotel`);
+
+--
+-- Indices de la tabla `hotel`
+--
+ALTER TABLE `hotel`
+  ADD PRIMARY KEY (`idhotel`);
+
+--
+-- Indices de la tabla `matricula`
+--
+ALTER TABLE `matricula`
+  ADD PRIMARY KEY (`idAlumne`,`idModul`) USING BTREE,
+  ADD KEY `idAlumne` (`idAlumne`),
+  ADD KEY `idModul` (`idModul`);
+
+--
+-- Indices de la tabla `modul`
+--
+ALTER TABLE `modul`
+  ADD PRIMARY KEY (`idModul`);
+
+--
+-- Indices de la tabla `reserva`
+--
+ALTER TABLE `reserva`
+  ADD PRIMARY KEY (`idreserva`),
+  ADD KEY `idclient` (`idclient`),
+  ADD KEY `idhotel` (`idhotel`),
+  ADD KEY `idhabitacio` (`idhabitacio`),
+  ADD KEY `idhotel_2` (`idhotel`,`idhabitacio`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `alumne`
+--
+ALTER TABLE `alumne`
+  MODIFY `idAlumne` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `client`
+--
+ALTER TABLE `client`
+  MODIFY `idclient` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `empleat`
+--
+ALTER TABLE `empleat`
+  MODIFY `idEmp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `hotel`
+--
+ALTER TABLE `hotel`
+  MODIFY `idhotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `modul`
+--
+ALTER TABLE `modul`
+  MODIFY `idModul` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22118;
+
+--
+-- AUTO_INCREMENT de la tabla `reserva`
+--
+ALTER TABLE `reserva`
+  MODIFY `idreserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `empleat`
+--
+ALTER TABLE `empleat`
+  ADD CONSTRAINT `empleat_ibfk_1` FOREIGN KEY (`idHotel`) REFERENCES `hotel` (`idhotel`);
+
+--
+-- Filtros para la tabla `habitacio`
+--
+ALTER TABLE `habitacio`
+  ADD CONSTRAINT `habitacio_ibfk_1` FOREIGN KEY (`idhotel`) REFERENCES `hotel` (`idhotel`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `matricula`
+--
+ALTER TABLE `matricula`
+  ADD CONSTRAINT `matricula_ibfk_1` FOREIGN KEY (`idAlumne`) REFERENCES `alumne` (`idAlumne`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `matricula_ibfk_2` FOREIGN KEY (`idModul`) REFERENCES `modul` (`idModul`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `reserva`
+--
+ALTER TABLE `reserva`
+  ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`idclient`) REFERENCES `client` (`idclient`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `reserva_ibfk_2` FOREIGN KEY (`idhotel`,`idhabitacio`) REFERENCES `habitacio` (`idhotel`, `idhabitacio`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
