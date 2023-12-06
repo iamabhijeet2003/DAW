@@ -1,0 +1,231 @@
+/*
+@import 'variables';
+
+nav {
+    &#desktop{
+      position: absolute;
+      width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      
+      @include responsive-size(medium){
+        display: none;
+      }
+      
+      ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      &>ul{
+        width: 100%;
+        height: 32px;
+        color: $text-color;
+        background-color: $bg-color;
+      }
+    
+    
+      li {
+        &.categoria {
+          float: left;
+
+
+          &>a{
+            -moz-transition: padding 0.4s ease-out;
+            -webkit-transition: padding 0.4s ease-out;
+            transition: padding 0.4s ease-out;
+          }
+
+          &:hover{
+            &>a{
+              padding: 10px 20px;
+            }
+          }
+
+          ul{
+            &.submenu{
+              -moz-transition: height 0.5s ease-out;
+              -webkit-transition: height 0.5s ease-out;
+              transition: height 0.5s ease-out;
+              position: absolute;
+              height: 0px;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+        a {
+          color: $text-color;
+          background-color: $bg-color;
+          text-decoration: none;
+          width: 160px;
+          padding: 7px 20px;
+          display: block;
+          text-align: center;
+          cursor: pointer;
+        
+          &:hover {
+            color: $text-color;
+            background-color: $bg-color;
+            -webkit-animation: iluminar 0.4s linear;
+            -moz-animation: iluminar 0.4s linear;
+            animation: iluminar 0.4s linear;
+          }
+        }
+      }
+      
+    }
+
+    
+
+
+nav{
+  &#mobile{
+    display: none;
+    float: right;
+    @include responsive-size(medium){
+      display: block;
+    }
+
+    
+    ul{
+      margin: 0px;
+      height: 0px;
+      overflow: hidden;
+      list-style-type: none;
+      position: absolute;
+      right: 10px;
+      top: 40px;
+
+      a{
+        color: #eee;
+        background-color: #138;
+        text-decoration: none;
+        width: 160px;
+        padding: 7px 20px;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        font-size: 0.6em;
+        font-weight: normal;
+        &:hover{
+          color: white;
+          background-color: #1744b5;
+          -moz-animation: iluminar 0.4s linear;
+          -webkit-animation: iluminar 0.4s linear;
+          animation: iluminar 0.4s linear;
+        }
+      }
+    }
+
+    &:hover{
+      ul{
+        height: auto;
+      }
+    }
+  }
+}
+*/
+nav#desktop {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  /*-- Práctica 3 --*/
+  /*----------------*/
+}
+nav#desktop ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+nav#desktop > ul {
+  width: 100%;
+  height: 32px;
+  color: #eee;
+  background-color: #138;
+}
+nav#desktop li.categoria {
+  float: left;
+}
+nav#desktop li.categoria > a {
+  -moz-transition: padding 0.4s ease-out;
+  -webkit-transition: padding 0.4s ease-out;
+  transition: padding 0.4s ease-out;
+}
+nav#desktop li.categoria:hover > a {
+  padding: 10px 20px;
+}
+nav#desktop li.categoria:hover ul.submenu {
+  height: 100px;
+}
+nav#desktop li.categoria ul.submenu {
+  -moz-transition: height 0.5s ease-out;
+  -webkit-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+}
+nav#desktop a {
+  color: #eee;
+  background-color: #138;
+  text-decoration: none;
+  width: 160px;
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+nav#desktop a:hover {
+  color: white;
+  background-color: #1744b5;
+  -moz-animation: iluminar 0.4s linear;
+  -webkit-animation: iluminar 0.4s linear;
+  animation: iluminar 0.4s linear;
+}
+@media (max-width: 1024px) {
+  nav#desktop {
+    display: none;
+  }
+}
+
+nav#mobile {
+  display: none;
+  float: right;
+}
+nav#mobile ul {
+  margin: 0px;
+  height: 0px;
+  overflow: hidden;
+  list-style-type: none;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+}
+nav#mobile ul a {
+  color: #eee;
+  background-color: #138;
+  text-decoration: none;
+  width: 160px;
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+nav#mobile ul a:hover {
+  color: white;
+  background-color: #1744b5;
+  -moz-animation: iluminar 0.4s linear;
+  -webkit-animation: iluminar 0.4s linear;
+  animation: iluminar 0.4s linear;
+}
+nav#mobile:hover ul {
+  height: auto;
+}
+@media (max-width: 1024px) {
+  nav#mobile {
+    display: block;
+  }
+}

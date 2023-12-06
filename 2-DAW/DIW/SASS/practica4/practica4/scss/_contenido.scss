@@ -1,0 +1,50 @@
+%button-block {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+%input-block {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid #bbb;  
+}
+
+
+i {
+  display: inline-block;
+}
+
+.icon-menu {
+  background-image: url("../images/menu.png");
+  background-position: 0px 0px;
+  height: 30px;
+  width: 32px;
+}
+
+.icon-news {
+  background-image: url("../images/news.png");
+  background-position: 0px -90px;
+  height: 30px;
+  width: 39px;
+}
+
+
+.icon-money {
+  background-image: url("../images/money.png");
+  background-position: 0px -100px;
+  height: 50px;
+  width: 54px;
+}
+
+.icon-contact {
+  background-image: url("../images/contact.png");
+  background-position: 0px 0px;
+  height: 30px;
+  width: 30px;
+}
