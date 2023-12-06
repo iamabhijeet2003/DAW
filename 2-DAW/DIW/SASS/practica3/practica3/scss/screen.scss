@@ -1,0 +1,133 @@
+// screen.scss
+@import 'variables';
+@import 'contenido';
+@import 'menu';
+// Animación iluminar
+@keyframes iluminar {
+  from {
+    @include establecer-color($text-color,$bg-color)
+  }
+  to {
+    @include establecer-color($text-hover-color,$bg-hover-color)
+  }
+}
+
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  padding: 12px 30px;
+  font-size: 1.8em;
+  @include establecer-color($bg-color,$text-color);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+ul.submenu {
+        -moz-transition: height 0.5s ease-out;
+        -webkit-transition: height 0.5s ease-out;
+        //@include box-sizing(border-box);
+        transition: height 0.5s ease-out;
+        position: absolute;
+        height: 0px;
+        overflow: hidden;
+      }
+li{
+  &.categoria{
+    float: left;
+  }
+  &.categoria{
+    
+
+    &>a{
+      -moz-transition: padding 0.4s ease-out;
+      -webkit-transition: padding 0.4s ease-out;
+      transition: padding 0.4s ease-out;
+    }
+
+    &:hover{
+      &>a{
+        padding: 10px 20px;
+      }
+
+      ul{
+        &.submenu{
+          height: 100px;
+        }
+      }
+    }
+
+
+  }
+}
+
+#contenido{
+  padding: 30px 20px;
+  .col-left{
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    padding: 10px;
+
+    .login{
+      input{
+        
+        @extend %input-block;
+      }
+      button{
+        @extend %button-block;
+      }
+    }
+
+    //responsive
+    @include responsive-size(small) {
+      float: none;
+      width: 100%;
+    }
+    
+  }
+
+
+  .button-action{
+    background-color: $bg-color;
+    color: white;
+
+    &:hover{
+      background-color: $bg-color*1.2;
+    }
+  }
+  .col-right{
+    box-sizing: border-box;
+    margin-left: 30%;
+    width: 70%;
+    padding: 10px;
+    h1{
+      color: $title-color;
+      font-size: 1.6em;
+    }
+    @include responsive-size(small) {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  @include responsive-size(medium) {
+    padding: 10px 20px;
+  }
+
+}
+
+footer {
+  @include establecer-color($text-color,$bg-color);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+}

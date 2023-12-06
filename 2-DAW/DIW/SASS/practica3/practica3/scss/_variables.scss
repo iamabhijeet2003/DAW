@@ -1,0 +1,48 @@
+// _variables.scss
+
+// Variables de colores
+$text-color: #eee;
+$text-hover-color: lighten($text-color,10%);
+$bg-color: #15a;
+$bg-hover-color: lighten($bg-color,10%);
+$title-color:ligthen($bg-color,10%);
+
+@mixin responsive-size($size) {
+  @if $size == medium {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $size == small {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+}
+
+
+// Mixin para establecer color de texto y fondo
+@mixin establecer-color($texto, $fondo) {
+  color: $texto;
+  background-color: $fondo;
+}
+
+// Mixin para box-sizing
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+// Mixin para transiciones
+@mixin transicion($property, $duration, $timing: linear) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+// Mixin para animaciones
+@mixin animacion($name, $duration, $timing: linear) {
+  -webkit-animation: $name $duration $timing;
+  -moz-animation: $name $duration $timing;
+  animation: $name $duration $timing;
+}
