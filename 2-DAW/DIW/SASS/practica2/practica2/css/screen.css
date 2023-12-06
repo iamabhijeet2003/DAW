@@ -1,0 +1,97 @@
+@keyframes iluminar {
+  from {
+    background-color: #666;
+    color: #eee;
+  }
+  to {
+    background-color: #888;
+    color: #fff;
+  }
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  padding: 12px 30px;
+  font-size: 1.8em;
+  color: #444;
+  background-color: #eee;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #aaa;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+nav > ul {
+  width: 100%;
+  height: 32px;
+  color: #eee;
+  background-color: #666;
+}
+
+nav a {
+  color: #eee;
+  background-color: #666;
+  text-decoration: none;
+  width: 160px;
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+nav a:hover {
+  color: #fff;
+  background-color: #888;
+  -moz-animation: iluminar 0.4s linear;
+  -webkit-animation: iluminar 0.4s linear;
+  animation: iluminar 0.4s linear;
+}
+
+ul.submenu {
+  -moz-transition: height 0.5s ease-out;
+  -webkit-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out;
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+}
+
+li.categoria {
+  float: left;
+}
+li.categoria > a {
+  -moz-transition: padding 0.4s ease-out;
+  -webkit-transition: padding 0.4s ease-out;
+  transition: padding 0.4s ease-out;
+}
+li.categoria:hover > a {
+  padding: 10px 20px;
+}
+li.categoria:hover ul.submenu {
+  height: 100px;
+}
+
+footer {
+  color: #eee;
+  background-color: #666;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

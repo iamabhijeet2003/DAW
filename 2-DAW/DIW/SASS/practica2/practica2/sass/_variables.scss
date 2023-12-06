@@ -1,0 +1,42 @@
+// _variables.scss
+
+// Variables de colores
+$text-color: #eee;
+$text-hover-color: #fff;
+$bg-color: #666;
+$bg-hover-color: #888;
+
+// Mixin para establecer color de texto y fondo
+@mixin establecer-color($texto, $fondo) {
+  color: $texto;
+  background-color: $fondo;
+}
+
+// Mixin para establecer color de texto y fondo al pasar el ratón
+@mixin establecer-color-hover($texto, $fondo) {
+  &:hover {
+    color: $texto;
+    background-color: $fondo;
+  }
+}
+
+// Mixin para box-sizing
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+// Mixin para transiciones
+@mixin transicion($property, $duration, $timing: linear) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+// Mixin para animaciones
+@mixin animacion($name, $duration, $timing: linear) {
+  -webkit-animation: $name $duration $timing;
+  -moz-animation: $name $duration $timing;
+  animation: $name $duration $timing;
+}
