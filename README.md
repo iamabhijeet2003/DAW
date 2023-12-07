@@ -15,11 +15,11 @@ Este repositorio contiene una colección de recursos y proyectos relacionados co
 
 - **Colaboración**: Estoy abierto a la colaboración y la retroalimentación. Si tienes sugerencias, correcciones o mejoras para cualquiera de los proyectos o recursos, no dudes en abrir problemas (issues) o enviar solicitudes de extracción (pull requests).
 
-
+![](https://i.imgur.com/waxVImv.png)
 ## Duración Total del Ciclo
 Duración total: 2000 horas (incluyendo el módulo de formación en centros de trabajo)
 
-![](https://i.imgur.com/waxVImv.png)
+
 ## Distribución por Cursos
 
 | Primer Curso                                               | Horas |
