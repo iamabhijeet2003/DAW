@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Producto</title>
+  <style>
+    .error-message {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Añadir Producto</h1>
+
+  <form onsubmit="return validarFormulario()">
+    <div>
+      <label for="codigo_producto">Código de Producto:</label>
+      <input type="text" id="codigo_producto" name="codigo_producto">
+      <span id="errorCodigoProducto" class="error-message"></span>
+    </div>
+    <div>
+      <label for="cantidad">Cantidad:</label>
+      <input type="text" id="cantidad" name="cantidad">
+      <span id="errorCantidad" class="error-message"></span>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    function validarFormulario() {
+      let codigoProducto = document.getElementById("codigo_producto").value;
+      let cantidad = document.getElementById("cantidad").value;
+
+      let errores = [];
+
+      // Validar campo codigo_producto
+      if (codigoProducto === "") {
+        errores.push("El campo Código de Producto es requerido.");
+        document.getElementById("errorCodigoProducto").innerHTML = "El campo Código de Producto es requerido.";
+      } else {
+        let codigoProductoRegExp = /^[A-Z]{3}\d{4}$/;
+        if (!codigoProducto.match(codigoProductoRegExp)) {
+          errores.push("El campo Código de Producto no cumple con el formato requerido. Ejemplo: MAT1234");
+          document.getElementById("errorCodigoProducto").innerHTML = "El campo Código de Producto no cumple con el formato requerido. Ejemplo: MAT1234";
+        } else {
+          document.getElementById("errorCodigoProducto").innerHTML = "";
+        }
+      }
+
+      // Validar campo cantidad
+      if (cantidad === "") {
+        errores.push("El campo Cantidad es requerido.");
+        document.getElementById("errorCantidad").innerHTML = "El campo Cantidad es requerido.";
+      } else {
+        let cantidadNum = parseInt(cantidad);
+        if (isNaN(cantidadNum) || cantidadNum < 1 || cantidadNum > 1000) {
+          errores.push("El campo Cantidad debe ser un número entero entre 1 y 1000.");
+          document.getElementById("errorCantidad").innerHTML = "El campo Cantidad debe ser un número entero entre 1 y 1000.";
+        } else {
+          document.getElementById("errorCantidad").innerHTML = "";
+        }
+      }
+
+      if (errores.length > 0) {
+        return false;
+      } else {
+        // Mostrar alerta con los datos introducidos por el usuario
+        let mensajeExito = "Datos introducidos:\n";
+        mensajeExito += "- Código de Producto: " + codigoProducto + "\n";
+        mensajeExito += "- Cantidad: " + cantidad + "\n";
+        alert(mensajeExito);
+        return true;
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+

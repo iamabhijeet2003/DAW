@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Nombres y Apellidos</title>
+</head>
+<body>
+
+  <h1>Llista</h1>
+  <ul id="listaNombresApellidos"></ul>
+
+  <script>
+    var personas = [
+      {
+        "nom": "Joan",
+        "cognoms": "Fuster Marí",
+        "edat": 23,
+        "poblacio": "Tavernes",
+      },
+      {
+        "nom": "Pepa",
+        "cognoms": "Ortolà Faus",
+        "edat": 25,
+        "poblacio": "Cullera",
+      },
+      {
+        "nom": "Alfred",
+        "cognoms": "Llopis Faus",
+        "edat": 26,
+        "poblacio": "Gandia",
+      },
+      {
+        "nom": "Rosa",
+        "cognoms": "Magraner Alba",
+        "edat": 34,
+        "poblacio": "Barx",
+      },
+    ];
+
+    let lista = document.getElementById("listaNombresApellidos");
+    personas.forEach(
+        function(persona) {
+        let nombreApellido = persona.nom + " " + persona.cognoms;
+        lista.innerHTML += "<li>" + nombreApellido + "</li>";
+        }
+    );
+  </script>
+</body>
+</html>
