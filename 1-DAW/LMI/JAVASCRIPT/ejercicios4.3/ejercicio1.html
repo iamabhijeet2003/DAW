@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 1</title>
+</head>
+
+<body>
+    
+    <h1>Exercicis 4.3 Estructura condicional</h1>
+    <h2>Ejercicio 1</h2>
+    <p>Fes una web que demane un número enter i diga si és parell o imparell. 
+        Inclou verificació numèrica i de contingut no buit.</p>
+	
+
+
+
+	<p>Introduce un número entero para saber si es par o impar:</p>
+	<input type="text" id="numero">
+	<button type="button" onclick="resultado()">Calcular</button>
+
+
+	<script type="text/javascript">
+		function resultado(){
+			var numero = document.getElementById('numero').value;
+			if (numero == '') {
+				alert('Debes escribir un número');
+				return;
+			}
+			if (isNaN(numero)) {
+				alert('Debes escribir un número entero');
+				return;
+			}
+
+			if (numero%2==0) {
+				alert('El número es par');
+			}
+			else {
+				alert('El número es impar');
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicion 2</title>
+</head>
+
+<body>
+    <h1>Exercicis 4.3 Estructura condicional</h1>
+    <h2>Ejercicio 2</h2>
+    <p>
+        2. Fes una web que demane 2 números enters i diga quin és el més gran i quin és el més menut. També ha de dir si són iguals. Inclou verificació numèrica i de contingut no buit.
+    </p>
+    <form>
+		<label>Primer numero: </label>
+		<input type="text" id="num1" />
+		<br/>
+		<label>Segundo numero: </label>
+		<input type="text" id="num2" />
+	</form>
+    <button type="button" onclick="calcularMayorMenor()">Calcular</button>
+	<br/>
+	<span id="resultado"></span>
+    <script type="text/javascript">
+		function calcularMayorMenor() {
+			var num1 = parseInt(document.getElementById('num1').value);
+			var num2 = parseInt(document.getElementById('num2').value);
+			if (num1 == "" || num2 == "") {
+				alert("Por favor, introduce ambos numeros");
+				return;
+			}
+			if (isNaN(num1) || isNaN(num2)) {
+				alert("Por favor, introduce numeros validos");
+				return;
+			}
+			if (num1 > num2) {
+				document.getElementById('resultado').innerHTML = "El mayor numero es " + num1 + " y el menor es " + num2;
+			} else if (num1 < num2) {
+				document.getElementById('resultado').innerHTML = "El mayor numero es " + num2 + " y el menor es " + num1;
+			} else {
+				document.getElementById('resultado').innerHTML = "Los numeros son iguales";
+			}
+		}
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <h1>Exercicis 4.3 Estructura condicional</h1>
+    <h2>Ejercicio 3</h2>
+    <p>
+        Fes una web que demane el nom de lusuari i la seua edat. 
+        Incloure verificació numèrica i de contingut no buit. 
+        També mostrarà un missatge d'advertència si l'edat de l'usuari és menor de 0 o major de 120.
+         Un cop llegides les dades, mostrar-les a la web.
+    </p>
+    <form>
+		<label>Nombre: </label>
+		<input type="text" id="name" />
+		<br/>
+		<label>Edad: </label>
+		<input type="text" id="age" />
+	</form>
+	<button type="button" onclick="verificar()">Verificar</button>
+	<br/>
+	<span id="resultado"></span>
+	<script type="text/javascript">
+		function verificar() {
+			var name = document.getElementById('name').value;
+			var age = parseInt(document.getElementById('age').value);
+			if (name == "" || age == "") {
+				alert("Por favor, introduce tu nombre y edad");
+				return;
+			}
+			if (isNaN(age)) {
+				alert("Por favor, introduce una edad valida");
+				return;
+			}
+			if (age < 0 || age > 120) {
+				alert("La edad es incorrecta");
+				return;
+			}
+			document.getElementById('resultado').innerHTML = "Hola " + name + ", tu edad es " + age;
+		}
+	</script>
+
+
+
+</body>
+</html>

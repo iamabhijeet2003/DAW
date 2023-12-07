@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <h1>Exercicis 4.3 Estructura condicional</h1>
+    <h2>Ejercicio 5</h2>
+    <p>
+        Calculo de IMS
+    </p>
+    <form>
+		<label>Altura (metros): </label>
+		<input type="text" id="height" />
+		<br/>
+		<label>Peso (kilogramos): </label>
+		<input type="text" id="weight" />
+	</form>
+	<button type="button" onclick="calcularIMC()">Calcular</button>
+	<br/>
+	<span id="resultado"></span>
+	<script type="text/javascript">
+		function calcularIMC() {
+			var height = parseFloat(document.getElementById('height').value);
+			var weight = parseFloat(document.getElementById('weight').value);
+			if (height == "" || weight == "") {
+				alert("Por favor, introduce tu altura y peso");
+				return;
+			}
+			if (isNaN(height) || isNaN(weight)) {
+				alert("Por favor, introduce numeros validos");
+				return;
+			}
+			if (height < 0.5 || height > 2.5 || weight < 20 || weight > 300) {
+				alert("Valores fuera de rango");
+				return;
+			}
+			var imc = weight / (height * height);
+			document.getElementById('resultado').innerHTML = "Tu IMC es " + imc;
+			if (imc < 18.5) {
+				document.getElementById('resultado').innerHTML += " y eres bajo peso.";
+			} else if (imc >= 18.5 && imc < 25) {
+				document.getElementById('resultado').innerHTML += " y tienes un peso normal.";
+			} else if (imc >= 25 && imc < 30) {
+				document.getElementById('resultado').innerHTML += " y eres sobrepeso.";
+			} else if (imc >= 30) {
+				document.getElementById('resultado').innerHTML += " y eres obeso.";
+			}
+		}
+	</script>
+
+
+</body>
+</html>

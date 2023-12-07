@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+    <h1>Exercicis 4.3 Estructura condicional</h1>
+    <h2>Ejercicio 4- Comparar palabras</h2>
+    <p>
+        Fes un programa que llegisca 2 paraules i diga si les 2 són exactament iguals 
+        (coincidint majúscules i minúscules), iguals (sense tenir en compte majúscules i minúscules)
+        o diferents. Incloure verificació de contingut no buit.
+    </p>
+    <form>
+		<label>Primera palabra: </label>
+		<input type="text" id="word1" />
+		<br/>
+		<label>Segunda palabra: </label>
+		<input type="text" id="word2" />
+	</form>
+	<button type="button" onclick="compararPalabras()">Comparar</button>
+	<br/>
+	<span id="resultado"></span>
+	<script type="text/javascript">
+		function compararPalabras() {
+			var word1 = document.getElementById('word1').value;
+			var word2 = document.getElementById('word2').value;
+			if (word1 == "" || word2 == "") {
+				alert("Por favor, introduce ambas palabras");
+				return;
+			}
+			if (word1 === word2) {
+				document.getElementById('resultado').innerHTML = "Las palabras son exactamente iguales";
+			} else if (word1.toLowerCase() === word2.toLowerCase()) {
+				document.getElementById('resultado').innerHTML = "Las palabras son iguales";
+			} else {
+				document.getElementById('resultado').innerHTML = "Las palabras son diferentes";
+			}
+		}
+	</script>
+</body>
+</html>
