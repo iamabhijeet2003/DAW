@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<form>
+		<label for="nombre">Introduzca tu nombre:</label>
+		<input type="text" id="nombre" name="nombre">
+		<button type="button" onclick="saludar()">Pulse aqui</button>
+	</form>
+    
+	<p id="mensaje"></p>
+    <script>
+        function saludar() {
+            var nombre = document.getElementById("nombre").value;
+            document.getElementById("mensaje").innerHTML = "Hola, " + nombre + "!";
+        }
+    </script>
+</body>
+</html>
