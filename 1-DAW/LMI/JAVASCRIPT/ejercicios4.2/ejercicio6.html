@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Convertir a horas, minutos y segundos</title>
+    </head>
+    <body>
+        <h1>Exercicios 4.2 Variables y formularios.</h1>
+        <h2>Ejercicio 6</h2>
+        <p>
+            Convertir a hores, minuts i segons una quantitat de temps expressada en segons introduïda a un formulari.
+        </p>
+        <form>
+            
+            <label>Introduce los segundos:</label>
+            <input type="text" id="segundos">
+            <input type="button" value="Calcular" onclick="calcularTiempo()">
+        </form>
+        <div id="resultado"></div>
+
+        <script>
+            function calcularTiempo(){
+                let segundos = parseFloat(document.getElementById('segundos').value);
+
+                let horas = Math.floor(segundos / 3600);
+                segundos %= 3600;
+                let minutos = Math.floor(segundos / 60);
+                segundos %= 60;
+
+                document.getElementById('resultado').innerHTML = "El tiempo es " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
+            }
+        </script>
+
+    </body>
+</html>

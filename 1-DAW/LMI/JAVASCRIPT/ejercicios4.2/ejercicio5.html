@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IMC</title>
+    </head>
+    <body>
+        <h1>Exercicios 4.2 Variables y formularios.</h1>
+        <h2>Ejercicio 5</h2>
+        <p>Fes una aplicació que demane a l'usuari la seua alçada en metres i el pes en quilograms i calcule l'índex de massa corporal segons la fórmula següent:
+            imc= peso/altura^2
+        </p>
+        <form>
+            <label>Introduce tu peso en kg:</label>
+            <input type="text" id="peso">
+            <br>
+            <label>Introduce tu altura en m:</label>
+            <input type="text" id="altura">
+            <br>
+            <input type="button" value="Calcular IMC" onclick="calcularIMC()">
+        </form>
+        <div id="resultado"></div>
+
+        <script>
+            function calcularIMC(){
+                let peso = parseFloat(document.getElementById('peso').value);
+                let altura = parseFloat(document.getElementById('altura').value);
+
+                let resultado = peso / (altura * altura);
+                document.getElementById('resultado').innerHTML = "Tu índice de masa corporal(IMC) es: " + resultado;
+            }
+        </script>
+
+    </body>

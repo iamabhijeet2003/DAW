@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operación</title>
+    </head>
+    <body>
+        <h1>Exercicios 4.2 Variables y formularios.</h1>
+        <h2>Ejercicio 3</h2>
+        <p>Fes una web que demane 3 números (a, b i c) i calcule el resultat de (a+b) / c.</p>
+        <form>
+            <label>Introduce el primer número:</label>
+            <input type="text" id="num1">
+            <br>
+            <label>Introduce el segundo número:</label>
+            <input type="text" id="num2">
+            <br>
+            <label>Introduce el tercer número:</label>
+            <input type="text" id="num3">
+            <br>
+            <input type="button" value="Calcular" onclick="calcularOperacion()">
+        </form>
+        <div id="resultado"></div>
+
+        <script>
+            function calcularOperacion(){
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+                let num3 = parseFloat(document.getElementById('num3').value);
+
+                let resultado = (num1 + num2) / num3;
+                document.getElementById('resultado').innerHTML = "El resultado de (a+b)/c es: " + resultado;
+            }
+        </script>
+
+    </body>
+</html>

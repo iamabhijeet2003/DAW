@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edad</title>
+    </head>
+    <body>
+        <h1>Exercicios 4.2 Variables y formularios.</h1>
+        <h2>Ejercicio 1</h2>
+        <p> Fes una web que demane, mitjançant un formulari i un input de tipus text, 
+            l´'edat de l’usuari. <br> Una vegada introduïda, mostrarà el text “La teua edat és” + el número introduït.
+        </p>
+        <form>
+            <label>Introduce tu edad:</label>
+            <input type="text" id="edad">
+            <input type="button" value="Enviar" onclick="mostrarEdad()">
+        </form>
+        <div id="resultado"></div>
+
+        <script>
+            function mostrarEdad(){
+                let edad = document.getElementById('edad').value;
+                document.getElementById('resultado').innerHTML = "Tu edad es " + edad + " años.";
+            }
+        </script>
+
+    </body>
+</html>

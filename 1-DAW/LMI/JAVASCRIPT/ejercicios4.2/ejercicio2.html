@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operaciones básicas</title>
+    </head>
+    <body>
+        <h1>Exercicios 4.2 Variables y formularios.</h1>
+        <h2>Ejercicio 2</h2>
+        <p>Fes un programa que demane 2 números i calcule la suma, la resta, la multiplicació, la divisió i la resta d'aquests 2 números. <br> Usar 2 inputs i un botó per a cada operació. Usar la funció parseFloat(x) o parseInt(x) per convertir els valors de text en valors numèrics.</p>
+        <form>
+            <label>Introduce el primer número:</label> 
+            <input type="text" id="num1">
+            <br>
+            <label>Introduce el segundo número:</label>
+            <input type="text" id="num2">
+            <br>
+            <input type="button" value="Suma" onclick="calcularSuma()"> 
+            <input type="button" value="Resta" onclick="calcularResta()">
+            <input type="button" value="Multiplicación" onclick="calcularMultiplicacion()">
+            <input type="button" value="División" onclick="calcularDivision()">
+            <input type="button" value="Resto" onclick="calcularResto()">
+        </form>
+        <div id="resultado"></div>
+
+        <script>
+            function calcularSuma(){
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+
+                let resultado = num1 + num2;
+                document.getElementById('resultado').innerHTML = "La suma es: " + resultado;
+            }
+
+            function calcularResta(){
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+
+                let resultado = num1 - num2;
+                document.getElementById('resultado').innerHTML = "La resta es: " + resultado;
+            }
+
+            function calcularMultiplicacion(){
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+
+                let resultado = num1 * num2;
+                document.getElementById('resultado').innerHTML = "La multiplicación es: " + resultado;
+            }
+
+            function calcularDivision(){
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+
+                let resultado = num1 / num2;
+                document.getElementById('resultado').innerHTML = "La división es: " + resultado;
+            }
+
+            function calcularResto(){
+                let num1 = parseFloat(document.getElementById('num1').value);
+                let num2 = parseFloat(document.getElementById('num2').value);
+
+                let resultado = num1 % num2;
+                document.getElementById('resultado').innerHTML = "El resto es: " + resultado;
+            }
+        </script>
+
+    </body>
+</html>

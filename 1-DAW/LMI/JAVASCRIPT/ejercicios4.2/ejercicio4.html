@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Concatenar</title>
+    </head>
+    <body>
+        <h1>Exercicios 4.2 Variables y formularios.</h1>
+        <h2>Ejercicio 4</h2>
+        <p> Fes una web que demane 3 paraules i que en prémer un botó mostre el resultat de concatenar aquestes 3 paraules, amb espais entre elles.</p>
+        <form>
+            <label>Introduce la primera palabra:</label>
+            <input type="text" id="palabra1">
+            <br>
+            <label>Introduce la segunda palabra:</label>
+            <input type="text" id="palabra2">
+            <br>
+            <label>Introduce la tercera palabra:</label>
+            <input type="text" id="palabra3">
+            <br>
+            <input type="button" value="Concatenar" onclick="concatenar()">
+        </form>
+        <div id="resultado"></div>
+
+        <script>
+            function concatenar(){
+                let palabra1 = document.getElementById('palabra1').value;
+                let palabra2 = document.getElementById('palabra2').value;
+                let palabra3 = document.getElementById('palabra3').value;
+
+                let resultado = palabra1 + " " + palabra2 + " " + palabra3;
+                document.getElementById('resultado').innerHTML = "El resultado de la concatenación es: " + resultado;
+            }
+        </script>
+
+    </body>
+</html>
