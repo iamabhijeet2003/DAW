@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 4.1</title>
+</head>
+<body>
+
+      
+      
+     
+
+      <form>
+          Nombre: <input type="text" id="nombre"/><span id="errorNombre" style="color:red;"></span><br/>
+          Apellidos: <input type="text" id="apellidos"/><span id="errorApellidos" style="color:red;"></span><br/>
+          Edad: <input type="text" id="edad"/><span id="errorEdad" style="color:red;"></span><br/>
+          Email: <input type="text" id="email"/><span id="errorEmail" style="color:red;"></span><br/>
+          Teléfono: <input type="text" id="telefono"/><span id="errorTelefono" style="color:red;"></span><br/>
+
+          Captcha: Escribe el resultado de 
+          <span id="numero1">
+            
+          </span> 
+          + 
+          <span id="numero2">
+            
+          </span> : 
+
+
+          <input type="text" id="captcha"/><span id="errorCaptcha" style="color:red;"></span><br/>
+          <input type="button" value="Registrar" onclick="verificarDatos();"/>
+      </form>
+        <div id="resultado"></div>
+    
+   
+
+        <script>
+
+
+          document.getElementById("numero1").innerHTML = (generarEnterosAleatorios(2, 9));
+          document.getElementById("numero2").innerHTML = (generarEnterosAleatorios(2, 9));
+
+
+          // funcion para generar los numeros aleatorios
+          function generarEnterosAleatorios(min, max) {
+            return Math.round(Math.random() * (max - min) + min);
+          }
+          
+          
+          //funcion para verificar los datos
+          function verificarDatos() {
+            // obtenemos los valores del formulario
+            let nombre = document.getElementById("nombre").value;
+            let apellidos = document.getElementById("apellidos").value;
+            let edad = document.getElementById("edad").value;
+            let email = document.getElementById("email").value;
+            let telefono = document.getElementById("telefono").value;
+            let captcha = document.getElementById("captcha").value;
+            let numero1 = document.getElementById("numero1").innerHTML;
+            let numero2 = document.getElementById("numero2").innerHTML;
+    
+            // creamos una letiable para controlar si hay errores
+            let hayErrores = false;
+    
+            // verificamos el nombre
+            if (nombre == "") {
+                document.getElementById("errorNombre").innerHTML = "Debes introducir tu nombre";
+                hayErrores = true;
+            } else {
+                document.getElementById("errorNombre").innerHTML = "";
+            }
+    
+            // verificamos los apellidos
+            if (apellidos == "") {
+                document.getElementById("errorApellidos").innerHTML = "Debes introducir tus apellidos";
+                hayErrores = true;
+            } else {
+                document.getElementById("errorApellidos").innerHTML = "";
+            }
+    
+            // verificamos la edad
+            if (isNaN(edad) || edad < 0 || edad > 120) {
+                document.getElementById("errorEdad").innerHTML = "Debes introducir una edad válida";
+                hayErrores = true;
+            } else {
+                document.getElementById("errorEdad").innerHTML = "";
+            }
+    
+            // verificamos el email
+            if (email == "") {
+                document.getElementById("errorEmail").innerHTML = "Debes introducir tu email";
+                hayErrores = true;
+            } else {
+                document.getElementById("errorEmail").innerHTML = "";
+            }
+    
+            // verificamos el telefono
+            if (telefono == "" || telefono.length < 9) {
+                document.getElementById("errorTelefono").innerHTML = "Debes introducir un teléfono válido";
+                hayErrores = true;
+            } else {
+                document.getElementById("errorTelefono").innerHTML = "";
+            }
+    
+            // verificamos el captcha
+             if (captcha == "") {
+                document.getElementById("errorCaptcha").innerHTML = "Debes introducir el resultado del captcha";
+                hayErrores = true;
+            } else {
+                if (captcha != (parseInt(numero1) + parseInt(numero2))) {
+                  document.getElementById("errorCaptcha").innerHTML = "El resultado de la suma es incorrecto";
+                  hayErrores = true;
+                } else {
+                  document.getElementById("errorCaptcha").innerHTML = "";
+                  // generamos nuevos numeros aleatorios para la captcha
+                  document.getElementById("numero1").innerHTML = generarEnterosAleatorios(2, 9);
+                  document.getElementById("numero2").innerHTML = generarEnterosAleatorios(2, 9);
+                }
+            }
+    
+            // si no hay errores, mostramos los datos
+            if (!hayErrores) {
+                alert("Los datos introducidos son:\nNombre: " + nombre + "\nApellidos: " + apellidos + "\nEdad: " + edad + "\nEmail: " + email + "\nTelefono: " + telefono);
+            }
+          }
+        </script>
+    
+</body>
+</html>
+
+
+
