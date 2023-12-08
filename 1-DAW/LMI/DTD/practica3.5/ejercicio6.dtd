@@ -1,0 +1,14 @@
+<!ELEMENT tienda (departamentos, productos)>
+    <!ELEMENT departamentos (departamento+)>
+    <!ELEMENT departamento (nombre)>
+    <!ATTLIST departamento id ID #REQUIRED
+                             comentario CDATA #IMPLIED>
+    <!ELEMENT productos (producto+)>
+    <!ELEMENT producto (nombre, precio)>
+    <!ATTLIST producto id ID #REQUIRED
+        idDepartamento IDREF #REQUIRED
+        comentario CDATA #IMPLIED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ATTLIST precio moneda CDATA #IMPLIED
+                     descuento (si|no) "no">

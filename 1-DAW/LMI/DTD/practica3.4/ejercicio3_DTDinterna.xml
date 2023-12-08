@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE editorial [
+    <!ELEMENT editorial (nombre, titulo,descripcion,fecha,ventas)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT descripcion (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT ventas (region+, trimestre*)>
+            <!ELEMENT region (t1?, t2?, t3?, t4?)>
+            <!ATTLIST region nombre CDATA #REQUIRED>
+            <!ELEMENT t1 (libros_vendidos?)>
+            <!ELEMENT t2 (libros_vendidos?)>
+            <!ELEMENT t3 (libros_vendidos?)>
+            <!ELEMENT t4 (libros_vendidos?)>
+            <!ELEMENT libros_vendidos (#PCDATA)>
+            <!ELEMENT trimestre (libros_vendidos)>
+            <!ATTLIST trimestre numero (1|2|3|4) #REQUIRED>
+    ]>
+<editorial>
+    <nombre>Editorial Aranda</nombre>
+    <titulo>Informe general de ventas</titulo>
+    <descripcion>informe de ventas para las regiones Norte, Centro y Sur</descripcion>
+    <fecha>30/12/2009</fecha>
+
+    <ventas>
+        <region nombre="Norte">
+            <t1>
+                <libros_vendidos>24000</libros_vendidos>
+            </t1>
+            <t2>
+                <libros_vendidos>38000</libros_vendidos>
+            </t2>
+            <t3>
+                <libros_vendidos>NO_INFO</libros_vendidos>
+            </t3>
+            <t4>
+                <libros_vendidos>NO_INFO</libros_vendidos>
+            </t4>
+        </region>
+        <region nombre="Centro">
+            <t1>
+                <libros_vendidos>NO_INFO</libros_vendidos>
+            </t1>
+            <t2>
+                <libros_vendidos>16080</libros_vendidos>
+            </t2>
+            <t3>
+                <libros_vendidos>25000</libros_vendidos>
+            </t3>
+            <t4>
+                <libros_vendidos>29000</libros_vendidos>
+            </t4>
+        </region>
+        <region nombre="Sur">
+            <t1>
+                <libros_vendidos>27000</libros_vendidos>
+            </t1>
+            <t2>
+                <libros_vendidos>31400</libros_vendidos>
+            </t2>
+            <t3>
+                <libros_vendidos>40100</libros_vendidos>
+            </t3>
+            <t4>
+                <libros_vendidos>30000</libros_vendidos>
+            </t4>
+        </region>
+    </ventas>
+
+</editorial>

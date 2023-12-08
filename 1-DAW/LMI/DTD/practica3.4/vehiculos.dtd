@@ -1,0 +1,14 @@
+
+  <!ELEMENT oferta (vehiculo+)>
+    <!ELEMENT vehiculo (marca, modelo, motor, matricula, kilometros, precio_inicial, precio_oferta, extras, fotos)>
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT motor (#PCDATA)>
+    <!ELEMENT matricula (#PCDATA)>
+    <!ELEMENT kilometros (#PCDATA)>
+    <!ELEMENT precio_inicial (#PCDATA)>
+    <!ELEMENT precio_oferta (#PCDATA)>
+    <!ELEMENT extras (extra+)>
+    <!ELEMENT extra (#PCDATA)>
+    <!ELEMENT fotos (foto+)>
+    <!ELEMENT foto (#PCDATA)>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nota SYSTEM "ejercicio1.dtd">
+<nota>
+    <para>Pedro</para>
+    <para>Juan</para>
+    <de>Laura</de>
+    <titulo>Recordatorio</titulo>
+    <contenido>A las 7:00 en la puerta del teatro</contenido>
+</nota>

@@ -1,0 +1,16 @@
+<!ELEMENT editorial (nombre, titulo,descripcion,fecha,ventas)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT descripcion (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ELEMENT ventas (region+, trimestre*)>
+            <!ELEMENT region (t1?, t2?, t3?, t4?)>
+            <!ATTLIST region nombre CDATA #REQUIRED>
+            <!ELEMENT t1 (libros_vendidos?)>
+            <!ELEMENT t2 (libros_vendidos?)>
+            <!ELEMENT t3 (libros_vendidos?)>
+            <!ELEMENT t4 (libros_vendidos?)>
+            <!ELEMENT libros_vendidos (#PCDATA)>
+            <!ELEMENT trimestre (libros_vendidos)>
+            <!ATTLIST trimestre numero (1|2|3|4) #REQUIRED>
+    

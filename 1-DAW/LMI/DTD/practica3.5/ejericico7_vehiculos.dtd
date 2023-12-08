@@ -1,0 +1,18 @@
+<!ENTITY pmetal "pintura metalizada">
+<!ELEMENT oferta (vehiculo+)>
+<!ELEMENT vehiculo (marca, modelo, motor?, matricula, kilometros, precio_inicial, precio_oferta, extras?, fotos)>
+<!ATTLIST vehiculo color CDATA #REQUIRED>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT motor (#PCDATA)>
+<!ATTLIST motor tipo CDATA #IMPLIED>
+<!ELEMENT matricula (#PCDATA)>
+<!ATTLIST matricula anyo CDATA #REQUIRED>
+<!ELEMENT kilometros (#PCDATA)>
+<!ELEMENT precio_inicial (#PCDATA)>
+<!ELEMENT precio_oferta (#PCDATA)>
+<!ELEMENT extras (extra+)>
+<!ELEMENT extra (#PCDATA)>
+<!ELEMENT fotos (foto+)>
+<!ELEMENT foto (#PCDATA)>
+<!ATTLIST foto tipoFoto (frontal | trasera | lateral | interior) "frontal">
