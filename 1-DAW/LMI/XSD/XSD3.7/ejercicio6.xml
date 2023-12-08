@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ejercicio6xsd.xsd">
+    <channel>
+        <title><![CDATA[BBC Mundo - Noticias]]></title>
+        <description><![CDATA[BBC Mundo - Noticias]]></description>
+        <link>http://www.bbcmundo.com</link>
+        <image>
+            <url>http://www.bbc.co.uk/mundo/images/gel/rss_logo.gif</url>
+            <title>BBC Mundo - Noticias</title>
+            <link>http://www.bbcmundo.com</link>
+        </image>
+        <language>es</language>
+        <item>
+            <title><![CDATA[3 razones por las que Jerusalén es una ciudad sagrada para
+   judíos, musulmanes y cristianos]]></title>
+            <description><![CDATA[El anuncio de que el presidente de Estados Unidos,
+   Donald Trump, reconocerá a Jerusalén como capital de Israel, ha provocado un incremento
+   de las tensiones en una de las regiones más conflictivas del mundo. Y es que para las
+   tres religiones monoteistas esta ciudad es uno de sus sitios más
+   sagrados.]]></description>
+            <link>http://www.bbc.com/mundo/noticias-internacional-42251691</link>
+            <guid isPermaLink="true">http://www.bbc.com/mundo/noticias-internacional42251691</guid>
+            <pubDate>2017-12-06T13:37:01</pubDate>
+            <enclosure length="16481" type="image/jpeg"
+                url="http://news.bbcimg.co.uk/media/images/74156000/jpg/_74156332_jerusalem2.jpg" />
+        </item>
+        <item>
+            <title><![CDATA[6 cosas envidiables y 3 curiosidades de Finlandia a 100 años
+   de su independencia (y el dato de por qué son los reyes del sauna)]]></title>
+            <description><![CDATA[Los finlandeses nos dieron el inolvidable Nokia 1100,
+   el adictivo pero no tan memorable Angry Birds, y el emblemático (y vandálico) cóctel
+   molotov. Y bastante más. BBC Mundo te cuenta detalles extraordinarios de este país
+   nórdico que celebra su centenario.]]></description>
+            <link>http://www.bbc.com/mundo/noticias-internacional-42237724</link>
+            <guid isPermaLink="true">http://www.bbc.com/mundo/noticias-internacional42237724</guid>
+            <pubDate>2017-12-06T05:10:01</pubDate>
+            <enclosure length="47568" type="image/jpeg"
+                url="http://c.files.bbci.co.uk/91CF/production/_99072373_gettyimages-634710858.jpg" />
+        </item>
+    </channel>
+</rss>

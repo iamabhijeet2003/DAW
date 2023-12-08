@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oferta  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ejercicio7xsd.xsd">
+    <vehiculo color="rojo">
+        <marca>ford</marca>
+        <modelo>focus</modelo>
+        <motor tipo="diesel">duratore 1.4</motor>
+        <matricula anyo="2014">1234AAAA</matricula>
+        <kilometros>12500</kilometros>
+        <precio_inicial>12000</precio_inicial>
+        <precio_oferta>9999.95</precio_oferta>
+        <extras>
+            <extra>llantas</extra>
+            <extra>pintura metalizada</extra>
+        </extras>
+        <fotos>
+            <foto tipoFoto="frontal">11325.jpg</foto>
+            <foto tipoFoto="interior">11326.jpg</foto>
+            <foto>11345.jpg</foto>
+        </fotos>
+    </vehiculo>
+    <vehiculo color="azul oscuro">
+        <marca>ford</marca>
+        <modelo>focus</modelo>
+        <motor tipo="gasolina">duratore 2.0</motor>
+        <matricula anyo="2015">12345AAA</matricula>
+        <kilometros>125000</kilometros>
+        <precio_inicial>10000</precio_inicial>
+        <precio_oferta>9000</precio_oferta>
+        <extras>
+            <extra>pintura metalizada</extra>
+            <extra>spoiler trasero</extra>
+            <extra>climatizador</extra>
+        </extras>
+        <fotos>
+            <foto tipoFoto="frontal">11345.jpg</foto>
+        </fotos>
+    </vehiculo>
+</oferta>

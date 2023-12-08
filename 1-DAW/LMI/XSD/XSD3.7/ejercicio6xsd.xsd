@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="rss">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="channel">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="title" type="xs:string"/>
+                        <xs:element name="description" type="xs:string"/>
+                        <xs:element name="link" type="xs:string"/>
+                        <xs:element name="image" type="imagenCaract" minOccurs="0"/>
+                        <xs:element name="language" type="xs:string" minOccurs="0"/>
+                        <xs:element name="item" type="itemCaract" minOccurs="0" maxOccurs="unbounded"/> 
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="version" default="2.0">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="1.0"/>
+                    <xs:enumeration value="2.0"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+</xs:element>
+<xs:complexType name="imagenCaract">
+    <xs:sequence>
+        <xs:element name="url" type="xs:anyURI"/>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element name="link" type="xs:anyURI"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="itemCaract">
+    <xs:sequence>
+        <xs:element name="title" type="xs:string" minOccurs="1"/>
+        <xs:element name="description" type="xs:string" minOccurs="1"/>
+        <xs:element name="link" type="xs:anyURI" minOccurs="0"/>
+        <xs:element name="guid" minOccurs="0">
+            <xs:complexType>
+                <xs:simpleContent>
+                    <xs:extension base="xs:anyURI">
+                        <xs:attribute name="isPermaLink" use="optional" type="xs:boolean" default="false"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="pubDate" type="xs:dateTime" minOccurs="0"/>
+        <xs:element name="enclosure" minOccurs="0">
+            <xs:complexType>
+                <xs:attribute name="length" use="required" type="xs:integer"/>
+                <xs:attribute name="type" use="required" type="xs:string"/>
+                <xs:attribute name="url" use="required" type="xs:anyURI"/>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+</xs:schema>

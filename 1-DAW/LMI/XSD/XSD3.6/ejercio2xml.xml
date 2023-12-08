@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<etiqueta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ejercicio2.xsd">
+        <nombre>Roberto Garcia</nombre>
+        <calle>c/ Mayor,27</calle>
+        <ciudad>Coslada</ciudad>
+        <pais>España</pais>
+        <edad>23</edad>
+</etiqueta>

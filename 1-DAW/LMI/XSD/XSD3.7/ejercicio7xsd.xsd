@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="oferta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="marca" type="xs:string"/>
+                            <xs:element name="modelo" type="xs:string"/>
+                            <xs:element name="motor" type="motorCaract"/>
+                            <xs:element name="matricula" type="matriculaAnyo" />
+                            <xs:element name="kilometros" type="xs:integer" />
+                            <xs:element name="precio_inicial" type="xs:decimal"/>
+                            <xs:element name="precio_oferta" type="xs:decimal"/>
+                            <xs:element name="extras" type="extraCoche" maxOccurs="unbounded"/>
+                            <xs:element name="fotos" type="fotoCoche" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                        <xs:attribute name="color" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="motorCaract">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="tipo" use="optional">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="diesel"/>
+                            <xs:enumeration value="gasolina"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="matriculaAnyo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="anyo" use="required" type="xs:gYear"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="extraCoche">
+        <xs:sequence>
+            <xs:element name="extra" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="fotoCoche">
+        <xs:sequence>
+            <xs:element name="foto" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="tipoFoto" default="frontal">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="frontal"/>
+                                        <xs:enumeration value="trasera"/>
+                                        <xs:enumeration value="lateral"/>
+                                        <xs:enumeration value="interior"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

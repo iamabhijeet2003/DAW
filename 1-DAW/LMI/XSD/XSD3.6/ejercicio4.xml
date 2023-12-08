@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oferta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="ejercicio4xsd.xsd">
+    <vehiculo>
+    <marca>ford</marca>
+    <modelo>focus</modelo>
+    <motor>duratore 1.4</motor>
+    <matricula>1234AAAA</matricula>
+    <kilometros>12500</kilometros>
+    <precio_inicial>12000</precio_inicial>
+    <precio_oferta>10000</precio_oferta>
+    <extras>
+        <extra>llantas</extra>
+        <extra>pintura metalizada</extra>
+    </extras>
+    <fotos>
+        <foto>11325.jpg</foto>
+        <foto>11326.jpg</foto>
+        <foto>11345.jpg</foto>
+    </fotos>
+    </vehiculo>
+    <vehiculo>
+    <marca>ford</marca>
+    <modelo>focus</modelo>
+    <motor>duratore 2.0</motor>
+    <matricula>12345AAA</matricula>
+    <kilometros>125000</kilometros>
+    <precio_inicial>10000</precio_inicial>
+    <precio_oferta>9000</precio_oferta>
+    <extras>
+        <extra>pintura metalizada</extra>
+        <extra>spoiler trasero</extra>
+        <extra>climatizador</extra>
+    </extras>
+    <fotos>
+        <foto>11345.jpg</foto>
+    </fotos>
+    </vehiculo>
+</oferta>
