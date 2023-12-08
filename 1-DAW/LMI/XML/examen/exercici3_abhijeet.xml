@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE feed [
+    <!ELEMENT feed (title, link, updated, author, entry*)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT link (#PCDATA)>
+    <!ELEMENT updated (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT entry (title, summary)>
+    <!ELEMENT summary (#PCDATA)>
+    <!ATTLIST link rel CDATA "self">
+    <!ATTLIST title id CDATA #IMPLIED>
+]>
+<feed>
+    <title>RSS de noticias de portada</title>
+    <link rel="self">http://www.eldiariomontanes.es/rss/atom/portada</link>
+    <updated>2017-12-06T13:43:23+01:00</updated>
+    <author>portada</author>
+    <entry>
+            <title id="20171206132009"> <![CDATA[ Gorostiaga defiende una reforma constitucional amplia y no limitada al modelo territorial ]]> </title>
+            <summary> <![CDATA[ La presidenta del Parlamento muestra su preocupación por el desprecio con el que algunos hablan de la Carta Magna durante la celebración de su 39 aniversario ]]> </summary>
+    </entry>
+    <entry>
+            <title id="20171206202455"><![CDATA[ La estafa piramidal con cupones descuento de Groupalia llega a Cantabria ]]></title>
+            <summary><![CDATA[ Empresarios de la región que tenían acuerdos con esta firma denuncian que acumulan facturas sin pagar por valor cercano a los 23.000 euros ]]></summary>
+    </entry>
+</feed>
