@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<librerias>
+    <libreria>
+        <libros>
+            <libro>
+                <isbn>9782746097360</isbn>
+                <titulo>Ficha técnica de XML PRÁCTICO</titulo>
+                <nivel profundidad="basico"> Basico</nivel>
+                <autor>THIERRY BOULANGER</autor>
+                <editorial>ENI</editorial>
+                <fecha_publicacion>10/09/2015</fecha_publicacion>
+                <pagina_web>https://www.casadellibro.com/libro-xml-practico-2-ed/9782746097360/2610974?gclid=CjwKCAiAzp6eBhByEiwA_gGq5D6c6YkaY2sSZiK8dsHZOBGOTQ5z2_TFZ2EbiwTIZ7RbonHISrvvFhoCKM4QAvD_BwE</pagina_web>
+                <precio>28,40 €</precio>
+            </libro>
+            <libro>
+                <isbn>9788496097452</isbn>
+                <titulo>Ficha técnica de XML: CURSO DE INICIACION</titulo>
+                <nivel profundidad="basico">Basico</nivel>
+                <autor>DAVID E. HUNTER</autor>
+                <editorial>INFOR BOOK S EDICIONES</editorial>
+                <fecha_publicacion>07/07/2005</fecha_publicacion>
+                <pagina_web>https://www.casadellibro.com/libro-xml-curso-de-iniciacion-2-ed/9788496097452/1040332?gclid=CjwKCAiAzp6eBhByEiwA_gGq5O4dV9pbAa9464HuvPP-P-XyP_hvn3gu-jKxrm1wXzwkZIEFBk9IfBoCI3oQAvD_BwE</pagina_web>
+                <precio>30,87 €</precio>
+            </libro>
+        </libros>
+    </libreria>
+
+    <libreria>
+        <libros>
+            <libro>
+                <isbn>978-84-16424-56-6</isbn>
+                <titulo>LENGUAJE XML. UF2217. CERTIFICADOS DE PROFESIONALIDAD</titulo>
+                <nivel profundidad="Avanzado">Avanzado</nivel>
+                <autor>CASTRO BÁEZ, FRANCISCO</autor>
+                <editorial>EDITORIAL ELEARNING</editorial>
+                <fecha_publicacion>2015</fecha_publicacion>
+                <pagina_web>http://www.tecno-libro.es/libros/lenguaje-xml_94015</pagina_web>
+                <precio>35,00€</precio>
+            </libro>
+            <libro>
+                <isbn>978-84-95318-68-8</isbn>
+                <titulo>INICIACIÓN A XML</titulo>
+                <nivel profundidad="basico ">basico</nivel>
+                <autor>HUNTER, DAVID E.</autor>
+                <editorial>INFORBOOK'S</editorial>
+                <fecha_publicacion>2002</fecha_publicacion>
+                <pagina_web>http://www.tecno-libro.es/libros/iniciacion-a-xml_67436</pagina_web>
+                <precio>35,76€</precio>
+            </libro>
+        </libros>
+    </libreria>
+
+</librerias>

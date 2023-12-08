@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<coches>
+    <coche>
+        <marca>BMW</marca>
+        <modelo>X6</modelo>
+        <motor>3000tdi</motor>
+        <matricula>MCM6435</matricula>
+        <kilometros>120000</kilometros>
+        <precio tipo="original"> 80000€</precio>
+        <precio tipo="oferta"> 67000€</precio>
+        <extras>
+            <extra>Paquete confort</extra>
+            <extra>vision 3d</extra>
+        </extras>
+        <fotos>
+            <foto>Imagen.jpg</foto>
+            <foto>Imagen2.jpg</foto>
+        </fotos>
+    </coche>
+
+    <coche>
+        <marca>Mercedes</marca>
+        <modelo>G63 amg</modelo>
+        <motor>800cv</motor>
+        <matricula>LCF2034</matricula>
+        <kilometros>34000</kilometros>
+        <precio tipo="original">178000€</precio>
+        <precio tipo="oferta"> 156000€</precio>
+        <extras>
+            <extra>Brabus</extra>
+            <extra>Sportline</extra>
+        </extras>
+        <fotos>
+            <foto>foto1.jpg</foto>
+            <foto>foto2.jpg</foto>
+        </fotos>
+    </coche>
+</coches>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<arboles>
+    <acer_monspessulanum>
+        <nombre_comun>Arce de Montpellier, Arce menor</nombre_comun>
+        <vegetacion>Caducifolio</vegetacion>
+        <altura>De 6 a 10 metros</altura>
+        <forma>Copa esférica.</forma>
+        <estructura> Tronco principal recto con bifurcaciones.</estructura>
+        <ramaje>colgante</ramaje>
+        <color estacion="primavera"> Haz verde brillante, envés verde blanquecino</color>
+        <resistencia_heladas>Heladas fuertes (hasta -15ºC)</resistencia_heladas>
+    </acer_monspessulanum>
+
+    <olea_europea>
+        <nombre_comun>Olivo</nombre_comun>
+        <vegetacion>Perenne</vegetacion>
+        <altura>De 8 a 15 metros</altura>
+        <forma>Copa irregular.</forma>
+        <estructura>Tronco principal irregular con bifurcaciones.</estructura>
+        <ramaje>tortuoso</ramaje>
+        <color estacion="primavera">Haz verde oscuro, envés verde plateado</color>
+        <resistencia_heladas>Heladas medias (hasta -10ºC)</resistencia_heladas>
+    </olea_europea>
+
+    <platanus_orientalis>
+        <nombre_comun>Platano</nombre_comun>
+        <vegetacion>Caducifolio</vegetacion>
+        <altura> De 20 a 25 metros</altura>
+        <forma> Copa ovoidal.</forma>
+        <estructura>Tronco principal recto.</estructura>
+        <ramaje>Ramaje expandido</ramaje>
+        <color estacion="primavera"> Haz verde medio, enves verde claro</color>
+        <color estacion="otoño">Ocre</color>
+        <resistencia_heladas> Heladas fuertes (hasta -20oC)</resistencia_heladas>
+    </platanus_orientalis>
+
+    <quercus_ilexm>
+        <nombre_comun>Encina</nombre_comun>
+        <vegetacion>Perenne</vegetacion>
+        <altura> En torno a 25 metros</altura>
+        <forma> Copa esférica o elíptica irregular.</forma>
+        <estructura>Tronco principal recto.</estructura>
+        <ramaje>tortuoso</ramaje>
+        <color estacion="primavera">Plateado en hojas jóvenes. En hojas antiguas, haz verde oscuro, envés plateado</color>
+        <resistencia_heladas>Heladas fuertes (hasta -15oC)</resistencia_heladas>
+    </quercus_ilexm>
+</arboles>

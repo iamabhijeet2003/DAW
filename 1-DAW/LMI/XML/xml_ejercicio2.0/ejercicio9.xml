@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<CDs>
+    <cd>
+        <album>A Hard Day's Night</album>
+        <banda>The Beatels</banda>
+        <genero>Rock</genero>
+        <canciones>
+            <cancion>A Hard Day's Night</cancion>
+            <cancion>I should have known better</cancion>
+            <cancion>If I fell</cancion>
+            <cancion>I'm happy to just dance with you</cancion>
+            <cancion>And I love her </cancion>
+            <cancion>Tell me why</cancion>
+            <cancion>Can't buy me love</cancion>
+            <cancion>Any time at all</cancion>
+            <cancion>I'll cry instead</cancion>
+            <cancion>Things we said today</cancion>
+            <cancion>When i get home</cancion>
+            <cancion>You can't do that</cancion>
+            <cancion>I'll be back</cancion>
+        </canciones>
+        <publicacion>1964</publicacion>
+        <discografia>Emi Records LTD. </discografia>
+        <words_and_music>John lennon and Paul McCarteny</words_and_music>
+        <codigo_barra>077774643726</codigo_barra>
+    </cd>
+
+    <cd>
+        <album>Abbey roads</album>
+        <banda>The Beatels</banda>
+        <genero>Rock</genero>
+        <canciones>
+            <cancion>Come Together</cancion>
+            <cancion>Something</cancion>
+            <cancion>Maxwell's Silver Hammer</cancion>
+            <cancion>Oh! Darling</cancion>
+            <cancion>Octopus's Garden </cancion>
+            <cancion>I Want You (She's So Heavy)</cancion>
+            <cancion>Can't buy me love</cancion>
+            <cancion>Any time at all</cancion>
+            <cancion>I'll cry instead</cancion>
+            <cancion>Things we said today</cancion>
+            <cancion>When i get home</cancion>
+            <cancion>You can't do that</cancion>
+            <cancion>I'll be back</cancion>
+        </canciones>
+        <publicacion>1969</publicacion>
+        <discografia>Emi Records LTD. </discografia>
+        <words_and_music>John lennon and Paul McCarteny</words_and_music>
+        <codigo_barra>077774646464</codigo_barra>
+        <web>www.corktown.com</web>
+    </cd>
+
+    <cd>
+        <album>The Rolling Stones</album>
+        <banda>Charlie Watts, Ronnie Wood, Mick Jagger y Keith Richards.</banda>
+        <genero>Rock</genero>
+        <canciones>
+            <cancion>Ruby Tuesday</cancion>
+            <cancion>Have you seen your mother , baby, standing in the shadow</cancion>
+            <cancion>Lets spend the night together</cancion>
+            <cancion>Lady Jane</cancion>
+            <cancion>Out of time </cancion>
+            <cancion>My girl</cancion>
+            <cancion>Back street girl</cancion>
+            <cancion>Please go home</cancion>
+            <cancion>Mother little helper</cancion>
+            <cancion>Take it or leave it</cancion>
+            <cancion>Ride on baby</cancion>
+            <cancion>Sittin on a fence</cancion>
+        </canciones>
+        <publicacion>1987</publicacion>
+        <discografia>The decca record co. ltd. </discografia>
+        <lugar>Londres</lugar>
+        <pais>Inglaterra</pais>
+        <total_timing>36.56 approx.</total_timing>
+        <codigo_barra>077774646464</codigo_barra>
+    </cd>
+</CDs>
