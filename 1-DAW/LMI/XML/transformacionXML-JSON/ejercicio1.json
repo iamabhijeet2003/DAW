@@ -1,0 +1,44 @@
+{
+    "tienda": {
+      "departamentos": {
+        "departamento": [
+          {
+            "_id": "d01",
+            "nombre": "Zapatillas"
+          },
+          {
+            "_id": "d02",
+            "nombre": "Guantes"
+          }
+        ]
+      },
+      "productos": {
+        "producto": [
+          {
+            "_idDepartamento": "d01",
+            "nombre": "Zapatillas Trekking",
+            "precio": {
+              "_moneda": "euros",
+              "_descuento": "si",
+              "_texto": "30"
+            }
+          },
+          {
+            "_idDepartamento": "d01",
+            "nombre": "Zapatillas Basquet",
+            "precio": {
+              "_moneda": "pesetas",
+              "_descuento": "si",
+              "_texto": "25"
+            }
+          },
+          {
+            "_idDepartamento": "d02",
+            "nombre": "Guantes esquí",
+            "precio": "16"
+          }
+        ]
+      }
+    }
+  }
+  

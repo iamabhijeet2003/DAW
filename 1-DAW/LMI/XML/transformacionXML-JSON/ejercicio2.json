@@ -1,0 +1,64 @@
+{
+    "oferta": {
+      "vehiculo": [
+        {
+          "_color": "rojo",
+          "marca": "ford",
+          "modelo": "focus",
+          "motor": {
+            "_tipo": "diesel",
+            "_texto": "duratore 1.4"
+          },
+          "matricula": {
+            "_anyo": "2014",
+            "_texto": "1234AAAA"
+          },
+          "kilometros": "12500",
+          "precio_inicial": "12000",
+          "extras": {
+            "extra": [
+              "llantas",
+              "pintura metalizada"
+            ]
+          },
+          "fotos": {
+            "foto": [
+              {
+                "_tipoFoto": "frontal",
+                "_texto": "11325.jpg"
+              },
+              "11345.jpg"
+            ]
+          }
+        },
+        {
+          "_color": "azul oscuro",
+          "marca": "ford",
+          "modelo": "focus",
+          "motor": {
+            "_tipo": "gasolina",
+            "_texto": "duratore 2.0"
+          },
+          "matricula": {
+            "_anyo": "2015",
+            "_texto": "12345AAA"
+          },
+          "kilometros": "125000",
+          "precio_inicial": "10000",
+          "extras": {
+            "extra": [
+              "spoiler trasero",
+              "climatizador"
+            ]
+          },
+          "fotos": {
+            "foto": {
+              "_tipoFoto": "frontal",
+              "_texto": "11345.jpg"
+            }
+          }
+        }
+      ]
+    }
+  }
+  

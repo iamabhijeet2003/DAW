@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tienda>
+      <departamentos>
+            <departamento id="d01">
+                  <nombre>Zapatillas</nombre>
+            </departamento>
+            <departamento id="d02">
+                  <nombre>Guantes</nombre>
+            </departamento>
+      </departamentos>
+      <productos>
+            <producto idDepartamento="d01">
+                  <nombre>Zapatillas Trekking</nombre>
+                  <precio moneda="euros" descuento="si">30</precio>
+            </producto>
+            <producto idDepartamento="d01">
+                  <nombre>Zapatillas Basquet</nombre>
+                  <precio moneda="pesetas" descuento="si">25</precio>
+            </producto>
+            <producto idDepartamento="d02">
+                  <nombre>Guantes esquí</nombre>
+                  <precio>16</precio>
+            </producto>
+      </productos>
+</tienda>

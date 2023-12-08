@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user id="1">
+      <first_name>Jeanette</first_name>
+      <last_name>Penddreth</last_name>
+      <email>jpenddreth0@census.gov</email>
+      <gender>Female</gender>
+    </user>
+    <user id="2">
+      <first_name>Giavani</first_name>
+      <last_name>Frediani</last_name>
+      <email>gfrediani1@senate.gov</email>
+      <gender>Male</gender>
+      <ip_address>229.179.4.212</ip_address>
+    </user>
+  </users>
+  

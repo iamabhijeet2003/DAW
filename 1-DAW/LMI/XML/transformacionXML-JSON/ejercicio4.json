@@ -1,0 +1,26 @@
+{
+    "students": [
+        {
+            "name": "John",
+            "age": 22,
+            "hobby": {
+                "reading": true,
+                "gaming": false,
+                "sport": "football"
+}, "class": [
+                "JavaScript",
+                "HTML",
+                "CSS"
+] },
+        {
+            "name": "Jennifer",
+            "age": 25,
+            "hobby": {
+                "reading": false,
+                "gaming": true,
+                "sport": "tennis"
+}, "class": [
+"XML",
+"Python" ]
+} ]
+}
