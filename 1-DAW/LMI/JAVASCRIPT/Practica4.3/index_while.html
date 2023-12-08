@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica 4.3</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                margin: 2em auto;
+                font-family: Arial, sans-serif;
+                font-size: 0.9em;
+                border: 2px solid #ccc;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 2em;
+            }
+            th {
+                background-color: #6a9bff;
+                font-weight: bold;
+                text-align: left;
+            }
+        </style>
+    </head>
+
+  <body>
+    <h1 style="text-align: center;">USANDO WHILE</h1>
+  <div id="tabla-container"></div>
+  
+  <script>
+    function crearTablaHTML(array) {
+
+     let tabla = '<table> <tr>';
+     let cabecera = ["nombre","apellido","poblacion","edad"];
+
+      // para agregar encabezado de la tabla
+      
+      tabla += '<tr>';
+      for (let nombrePropiedad of cabecera) {
+        tabla += '<th>'+ nombrePropiedad + '</th>';
+      }
+      tabla += '</tr>';
+      
+      
+     // para agregar filas de datos
+        let i = 0;
+        while (i < array.length) {
+        tabla += '<tr>';
+        let j = 0;
+        while (j < cabecera.length) {
+            tabla += '<td>';
+            if (cabecera[j] in array[i]) {
+            tabla += array[i][cabecera[j]];
+            }
+            tabla += '</td>';
+            j++;
+        }
+        tabla += '</tr>';
+        i++;
+        }
+
+      tabla += '</table>';
+      return tabla;
+    }
+    
+    
+    let array = [
+      
+      {"nombre": "Joan",
+       "apellido": "Fuster Marí",
+       "edad": 23,
+       "poblacion": "Tavernes",
+      },
+      {
+        "nombre": "Pepa",
+        "apellido": "Ortolà Faus",
+        "poblacion": "Cullera",
+      },
+      {
+        "nombre": "Alfred",
+        "edad": 26,
+        "poblacion": "Gandia",
+      },
+      {
+      "nombre": "Rosa",
+      },
+    ];
+
+    let tablaHTML = crearTablaHTML(array);
+    document.getElementById('tabla-container').innerHTML = tablaHTML;
+  </script>
+</body>
+</html>
