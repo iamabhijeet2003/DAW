@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <select id="seleccion_puertos">
+        <option value="selecciona" selected>Seleciona un Puerto: </option>
+        <option value="Pirineos">Pirineos</option>
+        <option value="Picos_de_Europa">Picos de Europa</option>
+        <option value="Todos_los_puertos">Todos los puertos</option>
+      </select>
+      
+      <button id="reset">Reset</button>
+      <button id="contacto">Contacto</button>
+      
+      <div id="contenido"></div>
+      
+
+      
+      <div id="formularioContacto" style="display: none;">
+        <h2>Formulario de Contacto</h2>
+        <form id="formulario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre"><br><br>
+      
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos"><br><br>
+      
+          <label for="genero">Género:</label>
+          <input type="radio" id="genero" name="genero" value="masculino"> Masculino
+          <input type="radio" id="genero" name="genero" value="femenino"> Femenino<br><br>
+      
+          <label for="bicicleta">Tipo de Bicicleta:</label>
+          <input type="checkbox" id="carretera" name="bicicleta" value="carretera"> Carretera
+          <input type="checkbox" id="gravel" name="bicicleta" value="gravel"> Gravel
+          <!-- Agrega los otros tipos de bicicleta aquí -->
+      
+          <br><br>
+          <button type="submit">Enviar</button>
+          <button type="button" id="cerrarFormulario">Cerrar</button>
+        </form>
+      </div>
+      
+</body>
+</html>
