@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax pur</title>
+    <style type="text/css">
+        .container{
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 10px;
+            background-color: red;
+            padding: 10px;
+        }
+
+        .container > div {
+            color: white;
+            background-color: rgb(1, 72, 1);
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .container{grid-template-columns: auto auto auto}
+        }
+
+        @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .container{grid-template-columns: auto auto auto auto auto}
+        }
+    </style>
+    <script type="text/javascript">
+        function carregaQuadrats(url){
+            promesa = new Promise((resolve,reject)=>{
+                xhr=new XMLHttpRequest();
+                xhr.onreadystatechange=()=>{
+                    if (xhr.readyState == 4){
+                        if (xhr.status == 200){
+                            //resposta=JSON.parse(xhr.responseText);
+                            //console.log(resposta[0].url);
+                            //console.log(xhr.responseText);
+                            resolve(xhr.responseText);
+                        }else {reject();}
+                    }
+                }
+                xhr.open("GET", url, true);
+                xhr.send();
+            });
+            return promesa;
+        }
+
+        function exitPromesa(resp){
+            //console.log(resp);
+            vector = JSON.parse(resp);
+            //alert(vector.length);
+            cadena="";
+            vector.forEach(elem=>{
+                cadena += "<div><p>"+elem.title+"</p></div>";
+            });
+            document.getElementById("contenedor").innerHTML=cadena;
+        }
+
+        function mostraError(){
+            alert("Error en la petició...");
+        }
+
+        window.onload = ()=>{
+            carregaQuadrats("http://jsonplaceholder.typicode.com/posts").then(exitPromesa).catch(function(){alert("Error AJAX")});
+        }
+    </script>
+</head>
+<body>
+<div id="contenedor" class="container"></div>
+</body>
+</html>
