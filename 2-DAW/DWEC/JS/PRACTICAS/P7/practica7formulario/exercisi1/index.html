@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Formulario</title>
+  <script>
+       function mostrarDatos() {
+          var nombre = document.getElementById("nombre").value;
+          var correo = document.getElementById("correo").value;
+          var contrasena = document.getElementById("contrasena").value;
+          var fechaNacimiento = document.getElementById("fecha_nacimiento").value;
+          var numero = document.getElementById("numero").value;
+          var aceptarTerminos = document.getElementById("checkbox").checked ? "Aceptado" : "No aceptado";
+          var opcionSeleccionada = document.querySelector('input[name="opcion"]:checked');
+          var seleccion = document.getElementById("seleccion").value;
+          var comentarios = document.getElementById("area_texto").value;
+
+          var mensaje = "Datos del formulario:\n";
+          mensaje += "Nombre: " + nombre + "\n";
+          mensaje += "Correo electrónico: " + correo + "\n";
+          mensaje += "Contraseña: " + contrasena + "\n";
+          mensaje += "Fecha de nacimiento: " + fechaNacimiento + "\n";
+          mensaje += "Número de teléfono: " + numero + "\n";
+          mensaje += "Acepto los términos y condiciones: " + aceptarTerminos + "\n";
+          mensaje += "Opción seleccionada: " + (opcionSeleccionada ? opcionSeleccionada.value : "Ninguna") + "\n";
+          mensaje += "Opción seleccionada en el select: " + seleccion + "\n";
+          mensaje += "Comentarios: " + comentarios;
+
+      alert(mensaje);
+    }
+  </script>
+</head>
+<body>
+
+<h1>Formulario de Ejemplo</h1>
+
+<form  method="post">
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre"><br>
+
+  <label for="correo">Correo electrónico:</label>
+  <input type="email" id="correo" name="correo"><br>
+
+  <label for="contrasena">Contraseña:</label>
+  <input type="password" id="contrasena" name="contrasena"><br>
+
+  <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+  <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
+
+  <label for="numero">Número de teléfono:</label>
+  <input type="tel" id="numero" name="numero"><br>
+
+  <label for="checkbox">Acepto los términos y condiciones:</label>
+  <input type="checkbox" id="checkbox" name="aceptar_terminos"><br>
+
+  <label for="radio1">Opción 1:</label>
+  <input type="radio" id="radio1" name="opcion" value="opcion1"><br>
+
+  <label for="radio2">Opción 2:</label>
+  <input type="radio" id="radio2" name="opcion" value="opcion2"><br>
+
+  <label for="seleccion">Seleccione una opción:</label>
+  <select id="seleccion" name="seleccion">
+    <option value="opcion1">Opción 1</option>
+    <option value="opcion2">Opción 2</option>
+    <option value="opcion3">Opción 3</option>
+  </select><br>
+
+  <label for="area_texto">Comentarios:</label>
+  <textarea id="area_texto" name="comentarios" rows="4" cols="50"></textarea><br>
+
+  <input type="submit" value="Enviar" onclick="mostrarDatos();">
+</form>
+
+</body>
+</html>

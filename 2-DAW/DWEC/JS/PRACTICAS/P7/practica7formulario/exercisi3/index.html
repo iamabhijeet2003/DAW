@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Formulario</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section>
+    <div class="form-box">
+      <form  method="post" id="formulario">
+        <h2>Abhijeet Formulario</h2>
+
+        <div class="inputbox">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre">
+          <span id="error-nombre"></span>
+        </div>
+        
+
+
+        <div class="inputbox">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo">
+          <span id="error-correo"></span>
+        </div>
+        
+
+        <div class="inputbox">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena">
+        <span id="error-contrasena"></span></div>
+        
+
+        <div class="inputbox">
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        <span id="error-fecha-nacimiento"></span></div>
+        
+
+        <div class="inputbox">
+        <label for="numero">Número de teléfono:</label>
+        <input type="tel" id="numero" name="numero">
+        <span id="error-numero"></span></div>
+        
+
+        <div class="inputbox">
+        <label for="checkbox">Acepto los términos y condiciones:</label>
+        <input type="checkbox" id="checkbox" name="aceptar_terminos">
+        <span id="error-terminos"></span></div>
+        
+
+        <div class="inputbox">
+        <label for="radio1">Opción 1:</label>
+        <input type="radio" id="radio1" name="opcion" value="opcion1"></div>
+
+        <div class="inputbox">
+        <label for="radio2">Opción 2:</label>
+        <input type="radio" id="radio2" name="opcion" value="opcion2">
+        <span id="error-opcion"></span></div>
+        
+
+
+        <div class="inputbox">
+        <label for="seleccion">Seleccione una opción:</label>
+        <select id="seleccion" name="seleccion">
+          <option value="opcion1">Opción 1</option>
+          <option value="opcion2">Opción 2</option>
+          <option value="opcion3">Opción 3</option>
+        </select>
+        <span id="error-seleccions"></span></div>
+        
+
+        <div class="inputbox">
+        <label for="area_texto">Comentarios:</label>
+        <textarea id="area_texto" name="comentarios" rows="4" cols="50"></textarea>
+        <span id="error-comentarios"></span></div>
+        
+        <div class="submitButton">
+          <input type="submit" id="boton-enviar" value="Enviar" onclick="validadoFormulario()">
+        </div>
+        
+      </form> 
+    </div>
+  </section>
+</body>
+</html>
