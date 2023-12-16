@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cuadrado {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadrado"></div>
+    <script>
+        function cambiarColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+
+            var color = `rgb(${r}, ${g}, ${b})`;
+
+            var cuadrado = document.getElementById("cuadrado");
+            cuadrado.style.backgroundColor = color;
+            
+        }
+
+
+        setInterval(cambiarColor, 200);
+    </script>
+
+
+   
+</body>
+</html>
