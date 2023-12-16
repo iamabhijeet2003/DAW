@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Exercici Pirámdes </title>
+		<style>
+			div.caixa{
+				color:white;
+				background-color:black;
+				width:150px;
+				height:150px;
+				display:block;
+			}
+		</style>	
+	</head>
+	
+	<body>
+
+	<script>
+		"use strict";
+		
+		const LIMIT = 4;
+		
+
+		
+		function piramide1(nomCapa, caracter){
+			var caixa = document.createElement("div");
+			
+			//Afegim el id i la classe CSS
+			caixa.id=nomCapa;
+			caixa.classList.add("caixa");
+			caixa.innerHTML="<h5>Pirámide 1</h5>";
+			
+			/*
+					*
+					**
+					***
+					****
+			*/
+			//Bucle encarregat de les línies
+			for(let i=0;i<=LIMIT;i++){
+				var linia = "";
+				//Bucle(s) encarregat del contingut de cada línia
+				for(let j=0;j<i;j++){
+					linia+= caracter;
+				}
+				
+				//Afegim la línia a la caixa
+				caixa.innerHTML+=linia+"<br>";				
+				
+			}	
+			return caixa;
+			
+		}
+
+		function piramide2(nomCapa,caracter){
+			/*
+				****
+				***
+				**
+				*
+			*/
+			var caixa2 = document.createElement("div");
+
+			caixa2.id=nomCapa;
+			caixa2.classList.add("caixa");
+			caixa2.innerHTML="<h5>Piramide 2</h5>";
+
+			for(let i=LIMIT; i>=1; i--){
+				var linia = "";
+				for(let j=i;j>=1;j--){
+					linia+=caracter;
+				}
+				caixa2.innerHTML+=linia+"<br>";
+			}
+			return caixa2;
+		}
+		
+		function piramide3(nomCapa,caracter){
+			/*
+			Piramide 3
+        		*
+      		   **
+    		  ***
+ 			 ****	
+			*/
+			var caixa3 = document.createElement("div");
+
+			caixa3.id=nomCapa;
+			caixa3.classList.add("caixa");
+			caixa3.innerHTML="<h5>Piramide 3</h5>";
+
+			for(let i=LIMIT; i>=1; i--){
+				var linia = "";
+				for(let j=i;j>=1;j--){
+					linia+="&nbsp;&nbsp";
+				}
+
+				for(let k=i; k<=LIMIT;k++){
+					linia+="*"
+				}
+				caixa3.innerHTML+=linia+"<br>";
+			}
+			return caixa3;
+		}
+
+
+		function piramide4(nomCapa,caracter){
+			/*
+			****
+			 ***
+			  **
+			   *
+			*/
+			var caixa4 = document.createElement("div");
+
+			caixa4.id=nomCapa;
+			caixa4.classList.add("caixa");
+			caixa4.innerHTML="<h5>Piramide 4</h5>";
+
+			for(let i=LIMIT; i>=1; i--){
+				var linia = "";
+				//espacios
+				for(let k=i; k<=LIMIT; k++){
+					linia += "&nbsp;&nbsp;"
+				}
+
+				//asteriscos
+				for(let j=i;j>=1;j--){
+					linia+="*";
+				}
+				
+				caixa4.innerHTML+=linia+"<br>";
+			}
+			return caixa4;
+		}
+
+
+		function piramide5(nomCapa,caracter){
+			/*
+			Piramide 5
+			*
+			***
+			*****
+			*******
+			*/
+			var caixa5 = document.createElement("div");
+
+			caixa5.id=nomCapa;
+			caixa5.classList.add("caixa");
+			caixa5.innerHTML="<h5>Piramide 5</h5>";
+
+			for(let i=1;i<=LIMIT;i++){
+				var linia = "";
+				//Bucle(s) encarregat del contingut de cada línia
+				for(let j=1;j<i*2;j++){
+					linia+= caracter;
+				}
+				
+				//Afegim la línia a la caixa
+				caixa5.innerHTML+=linia+"<br>";				
+				
+			}	
+		
+			return caixa5;
+		}
+
+
+		function piramide6(nomCapa,caracter){
+			/*
+			*******
+			*****
+			***
+			*
+			*/
+			var caixa6 = document.createElement("div");
+
+			caixa6.id=nomCapa;
+			caixa6.classList.add("caixa");
+			caixa6.innerHTML="<h5>Piramide 6</h5>";
+
+			for(let i=LIMIT;i>=0;i--){
+				var linia = "";
+				//Bucle(s) encarregat del contingut de cada línia
+				for(let j=i*2;j>1;j--){
+					linia+= caracter;
+				}
+				
+				//Afegim la línia a la caixa
+				caixa6.innerHTML+=linia+"<br>";				
+				
+			}	
+		
+			return caixa6;
+		}
+		
+
+		function piramide7(nomCapa,caracter){
+			/*
+			Piramide 7
+			
+			*/
+			var caixa7 = document.createElement("div");
+
+			caixa7.id=nomCapa;
+			caixa7.classList.add("caixa");
+			caixa7.innerHTML="<h5>Piramide 7</h5>";
+
+
+			for(let i=0; i<LIMIT; i++){
+				var linia = "";
+				for(let j=0;j<(i*2);j++){
+					linia+="&nbsp;&nbsp;";
+				}
+
+				for(let k=0; k<(LIMIT-i)*2-1;k++){
+					linia+="*"
+				}
+				caixa7.innerHTML+=linia+"<br>";
+			}
+			return caixa7;
+
+			
+		}
+
+		
+		document.body.appendChild(piramide1("capa1", "*"));
+		document.body.appendChild(piramide2("capa2", "*"));
+		document.body.appendChild(piramide3("capa3", ""));
+		document.body.appendChild(piramide4("capa4", ""));
+		document.body.appendChild(piramide5("capa5", "*"));
+		document.body.appendChild(piramide6("capa6", "*"));
+		document.body.appendChild(piramide7("capa7", ""));
+
+
+
+		
+	</script>
+	</body>
+	</html>
