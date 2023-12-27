@@ -1,0 +1,206 @@
+
+*
+{
+    margin:0;
+}
+/* Capçalera */
+
+header
+{
+    background-color:#353949;
+    color:#fff;
+    padding:10px 0;
+    width:100%;
+    display:block;
+    position:sticky;
+    top:0;
+    z-index: 1; 
+}
+
+footer
+{
+    background-color:#353949;    
+    position:sticky;
+    bottom:0;
+    padding:10px 0;
+    width:100%;
+    height: 50px;
+}
+
+.logo
+{
+    font-size:40px;
+    font-weight: bold;
+    width:100%;
+    height:100%;
+    text-align: center;
+    text-shadow: 0 0 3px #e84248, 0 0 5px #e84248;
+}
+
+/*Barra navegació*/
+nav
+{
+    max-width: 1200px;
+    height: 50px;
+    margin:0 auto;
+    display:inline-block;    
+    padding: 0 20px;
+}
+
+.menu
+{
+    list-style:none;
+    display:flex;
+}
+
+.menu li
+{
+    margin-right:20px;
+
+}
+
+.menu li a
+{
+    text-decoration:none;
+    color:#fff;
+    transition: color 0.3s ease;
+    height:30px;
+    display:inline-block;
+    padding:15px;
+}
+
+.menu li a:hover
+{
+    background: linear-gradient(to bottom,#979AA4 0 30%, #353949 )
+}
+
+
+.titol span[class^="border"] 
+{
+    color:#fff;
+    padding:18px;
+    font-size:25px;
+    letter-spacing:10px;    
+    box-shadow: 1px 1px 3px #1c1a1a;
+}
+
+.titol span.border
+{
+    background-color: #e84248;
+
+}
+
+.titol span.border2
+{
+    background-color: #17a2b8;
+
+}
+
+.titol
+{
+    position:absolute;
+    left:0;
+    top:50%;
+    width:100%;
+    text-align:center;
+}
+
+div.desc
+{
+  color: #353949;
+  background-color:white;
+  font-size: 1.5em;
+  text-align:center;
+  padding:10% 10%;
+  text-align: justify;  
+  box-shadow: 3px 3px 5px #1d1c1c;
+  
+}
+
+
+.bg1
+{
+    position: relative;
+    opacity: 0.75;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./img/bgimg4.jpg");
+    min-height: 200px;
+  }
+
+ 
+
+.copyright-wrapper {
+    color: #6d6d6d;
+    display:block;
+    margin:20px;
+}
+.copyright-wrapper a
+{
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*Estils de taules*/
+
+table.tgestio
+{
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
+    width:75%;
+}
+table.tgestio tr.trhead
+{
+    color:white;
+    background-color:#353949;
+    font-weight: bolder;
+}
+
+table.tgestio tr.trsenar
+{
+    background:rgb(255, 255, 255);
+
+}
+
+table.tgestio tr.trparell
+{
+    background:rgb(194, 222, 255);
+
+}
+
+table.tgestio tr.trselected
+{
+    background: #17a2b8 !important;
+    color:white;
+    font-weight: bolder;;
+}
+
+.elemerror
+{
+    background: #e84248 !important;
+    color:white;
+    font-weight: bolder;
+}
+
+.ocultable
+{
+    
+}
+
+div#opcions
+{
+    margin:20px;
+}
+
+
+
+
+
+
+
