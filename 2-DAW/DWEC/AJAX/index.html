@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-5 mx-auto">
+            <div id="photoContainer" class="img-fluid"></div>
+            <div id="commentContainer"></div>
+
+            <button id="nextButton" class="btn btn-primary mt-3">Siguiente páginas</button>
+        </div>
+        
+        
+        <div class="col me-auto ms-auto text-center">
+                <nav aria-label="Page navigation example" class="text-center">
+                    <ul class="pagination text-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    </div>
+</div>
+
+
+<script>
+    var currentPhotoIndex = 0;
+
+    // Function to make an AJAX request
+    function fetchData(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                callback(JSON.parse(xhr.responseText));
+            }
+        };
+        xhr.open('GET', url, true);
+        xhr.send();
+    }
+
+    // Function to display a single photo
+    function displayPhoto(photo) {
+        var photoContainer = document.getElementById('photoContainer');
+        photoContainer.innerHTML = '';
+
+        var img = document.createElement('img');
+        img.src = photo.url;
+        img.alt = photo.title;
+        photoContainer.appendChild(img);
+
+        var commentUrl = 'https://jsonplaceholder.typicode.com/posts/' + photo.id + '/comments';
+        fetchData(commentUrl, function(comments) {
+            displayComment(comments);
+        });
+    }
+
+    function displayComment(comments) {
+        var commentContainer = document.getElementById('commentContainer');
+        commentContainer.innerHTML = '';
+
+        comments.forEach(function(comment) {
+            var div = document.createElement('div');
+            var h5 = document.createElement('h5');
+            var p = document.createElement('p');
+            h5.textContent = comment.title;x
+            p.textContent = comment.body;
+            div.appendChild(h5);
+            div.appendChild(p);
+            commentContainer.appendChild(div);
+        });
+    }
+
+
+    // Function to handle the "Next Photo" button click
+    function showNextPhoto(photos) {
+        currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+        displayPhoto(photos[currentPhotoIndex]);
+    }
+
+    // Fetch photos from the JSONPlaceholder API
+    var apiUrl = 'https://jsonplaceholder.typicode.com/photos';
+    fetchData(apiUrl, function(photos) {
+        displayPhoto(photos[currentPhotoIndex]);
+        
+
+
+        // Add event listener for the "Next Photo" button
+        var nextButton = document.getElementById('nextButton');
+        nextButton.addEventListener('click', function() {
+            showNextPhoto(photos);
+        });
+    });
+</script>
+
+</body>
+</html>
