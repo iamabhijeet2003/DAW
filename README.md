@@ -52,5 +52,5 @@ Duración total: 2000 horas (incluyendo el módulo de formación en centros de t
 
 Puedes ponerte en contacto conmigo para hacer cualquier preguntas o sugerencias sobre el proyecto/repositorio, puedes enviarme un correo electrónico a abhijeet3016@gmail.com 
 
-## PR
+## Contribuciones
 Si quieres proponer algun cambio o mejora puedes crear un Pull request.
