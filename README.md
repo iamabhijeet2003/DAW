@@ -50,5 +50,7 @@ Duración total: 2000 horas (incluyendo el módulo de formación en centros de t
 
 ## Contacto
 
-Si deseas ponerte en contacto conmigo para hacer preguntas o sugerencias, puedes enviarme un correo electrónico a abhijeet3016@gmail.com 
-Gracias por visitar mi repositorio y acompañarme en mi viaje de aprendizaje y desarrollo en el mundo de las aplicaciones web.
+Puedes ponerte en contacto conmigo para hacer cualquier preguntas o sugerencias sobre el proyecto/repositorio, puedes enviarme un correo electrónico a abhijeet3016@gmail.com 
+
+## PR
+Si quieres proponer algun cambio o mejora puedes crear un Pull request.
