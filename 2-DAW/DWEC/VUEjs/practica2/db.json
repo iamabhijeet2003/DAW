@@ -1,0 +1,236 @@
+{
+  "personas": [
+    {
+      "id": "1",
+      "nombre": "Josep",
+      "apellido": "Magraner i Ramon",
+      "dni": "2020202020",
+      "email": "josep@email.com",
+      "telefono": "2982728972",
+      "horasMantenimiento": "5",
+      "especialidad": "Front-End",
+      "fechaIngreso": "24/02/2023"
+    },
+    {
+      "id": "2",
+      "nombre": "Jose Fidel",
+      "apellido": "Oltra Landete",
+      "dni": "1122121121",
+      "email": "fidel@email.com",
+      "telefono": "2982728972",
+      "horasMantenimiento": "6",
+      "especialidad": "Back-End",
+      "fechaIngreso": "24/02/2012"
+    },
+    {
+      "id": "3",
+      "nombre": "Guillermo",
+      "apellido": "Vidal Frasquet",
+      "dni": "65465465451",
+      "email": "daenerys@email.com",
+      "telefono": "2982728972",
+      "horasMantenimiento": "4",
+      "especialidad": "Cybersecurity",
+      "fechaIngreso": "24/02/2008"
+    },
+    {
+      "id": "09b6",
+      "nombre": "John",
+      "apellido": "Doe",
+      "dni": "123456789",
+      "email": "john@example.com",
+      "telefono": "1234567890",
+      "horasMantenimiento": "5",
+      "especialidad": "Front-End",
+      "fechaIngreso": "2023-01-30"
+    },
+    {
+      "id": "8441",
+      "nombre": "John",
+      "apellido": "Doe",
+      "dni": "123456789",
+      "email": "john@example.com",
+      "telefono": "1234567890",
+      "horasMantenimiento": "5",
+      "especialidad": "Front-End",
+      "fechaIngreso": "2023-01-30"
+    },
+    {
+      "id": "5",
+      "nombre": "Maria",
+      "apellido": "Garcia",
+      "dni": "987654321",
+      "email": "maria@example.com",
+      "telefono": "9876543210",
+      "horasMantenimiento": "7",
+      "especialidad": "Back-End",
+      "fechaIngreso": "2022-05-15"
+    },
+    {
+      "id": "abc123",
+      "nombre": "Alice",
+      "apellido": "Johnson",
+      "dni": "456789012",
+      "email": "alice@example.com",
+      "telefono": "4567890123",
+      "horasMantenimiento": "6",
+      "especialidad": "Data Science",
+      "fechaIngreso": "2023-08-20"
+    },
+    {
+      "id": "def456",
+      "nombre": "Bob",
+      "apellido": "Smith",
+      "dni": "789012345",
+      "email": "bob@example.com",
+      "telefono": "7890123456",
+      "horasMantenimiento": "8",
+      "especialidad": "DevOps",
+      "fechaIngreso": "2021-12-10"
+    },
+    {
+      "id": "6",
+      "nombre": "Sophia",
+      "apellido": "Martinez",
+      "dni": "543210987",
+      "email": "sophia@example.com",
+      "telefono": "5432109876",
+      "horasMantenimiento": "9",
+      "especialidad": "Full-Stack",
+      "fechaIngreso": "2022-09-25"
+    },
+    {
+      "id": "ghi789",
+      "nombre": "Emma",
+      "apellido": "Brown",
+      "dni": "210987654",
+      "email": "emma@example.com",
+      "telefono": "2109876543",
+      "horasMantenimiento": "5",
+      "especialidad": "UI/UX Design",
+      "fechaIngreso": "2023-11-18"
+    },
+    {
+      "id": "jkl012",
+      "nombre": "Michael",
+      "apellido": "Miller",
+      "dni": "765432109",
+      "email": "michael@example.com",
+      "telefono": "7654321098",
+      "horasMantenimiento": "7",
+      "especialidad": "Machine Learning",
+      "fechaIngreso": "2022-03-12"
+    },
+    {
+      "id": "7",
+      "nombre": "Luis",
+      "apellido": "Rodriguez",
+      "dni": "876543210",
+      "email": "luis@example.com",
+      "telefono": "8765432109",
+      "horasMantenimiento": "6",
+      "especialidad": "Cloud Computing",
+      "fechaIngreso": "2021-07-08"
+    },
+    {
+      "id": "mno345",
+      "nombre": "Isabella",
+      "apellido": "Lopez",
+      "dni": "321098765",
+      "email": "isabella@example.com",
+      "telefono": "3210987654",
+      "horasMantenimiento": "8",
+      "especialidad": "Mobile Development",
+      "fechaIngreso": "2023-04-30"
+    },
+    {
+      "id": "pqr678",
+      "nombre": "Alexander",
+      "apellido": "Gonzalez",
+      "dni": "987654321",
+      "email": "alexander@example.com",
+      "telefono": "9876543210",
+      "horasMantenimiento": "7",
+      "especialidad": "Cybersecurity",
+      "fechaIngreso": "2022-10-15"
+    }
+    
+    
+    
+  ],
+  "incidencia": [
+    {
+      "id": "1",
+      "aula": 2,
+      "descripcion": "monitor roto",
+      "nivelUrgencia": "Media",
+      "fechaRegistro": "2002/11/22",
+      "estado": "solucionado"
+    },
+    {
+      "id": "2",
+      "aula": 4,
+      "descripcion": "proyector no va",
+      "nivelUrgencia": "Urgente",
+      "fechaRegistro": "2002/12/22",
+      "estado": "no-solucionado"
+    },
+    {
+        "id": "4",
+      "aula": 4,
+      "descripcion": "proyector no va",
+      "nivelUrgencia": "Urgente",
+      "fechaRegistro": "2002/12/22",
+      "estado": "no-solucionado"
+    },
+    {
+      "id": "3",
+      "aula": 6,
+      "descripcion": "computadora con problemas de arranque",
+      "nivelUrgencia": "Alta",
+      "fechaRegistro": "2003/01/15",
+      "estado": "no-solucionado"
+    },
+    {
+      "id": "5",
+      "aula": 3,
+      "descripcion": "problemas de conexión a internet",
+      "nivelUrgencia": "Media",
+      "fechaRegistro": "2003/02/10",
+      "estado": "en-progreso"
+    },
+    {
+      "id": "6",
+      "aula": 1,
+      "descripcion": "luces del salón parpadeando",
+      "nivelUrgencia": "Baja",
+      "fechaRegistro": "2003/03/05",
+      "estado": "solucionado"
+    },
+    {
+      "id": "7",
+      "aula": 5,
+      "descripcion": "falla en el sistema de audio",
+      "nivelUrgencia": "Alta",
+      "fechaRegistro": "2003/04/20",
+      "estado": "no-solucionado"
+    },
+    {
+      "id": "8",
+      "aula": 2,
+      "descripcion": "silla rota",
+      "nivelUrgencia": "Baja",
+      "fechaRegistro": "2003/05/12",
+      "estado": "en-progreso"
+    },
+    {
+      "id": "9",
+      "aula": 3,
+      "descripcion": "pizarrón desgastado",
+      "nivelUrgencia": "Media",
+      "fechaRegistro": "2003/06/08",
+      "estado": "solucionado"
+    }
+ 
+  ]
+}
