@@ -1,0 +1,35 @@
+Course 2023-2024
+Unit 16. Exam.
+1 UNIT 16 EXAM
+API REST with Node, Express and MongoDB Create a folder to develop a Node project.
+Install the mongoose library.
+Go to MongoDB and create a database "examen"
+Create a collection "authors" in the "examen" database
+1.1 Exercici 01 (2 points)
+In a file named author.js, create a model with two schemas: Author and Book.
+The schema Book must include these properties:
+• Title (string)
+• Year (string, 4 digits)
+• Description (string)
+• Pages (integer)
+The schema Author must include these properties:
+• Name (string)
+• Country (string)
+• Books (an array of Book objects)
+Create an object, link it to the "authors" collection and export it to use in the index.js file
+1.2 Exercici 2 (2 points)
+In the index.js file:
+• Create a GET service that returns all the Author and their Books
+• Create a GET service that returns the Author with a given id passed in the query string
+1.3 Exercici 3 (2 points)
+• Create a POST service to add a new Author with a couple of books to the collection.
+• Create a POST service to add a new Book to an existing Author given the id
+IES Jaume II el Just - DWES
+2/3
+Unit 16. Exam.
+1.4 Exercici 4 (3 points)
+• Create a PUT service to modify the country of an author given the id.
+• Create a PUT service to modify the name of an author given the id.
+• Create a PUT service to change the description a book given the id.
+1.5 Exercici 5 (1 point)
+• Create a DELETE service to delete an author given the id
